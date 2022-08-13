@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Seek Another Land</title>
+  
+  <subtitle>寻找属于自己的小岛</subtitle>
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2022-07-30T13:54:47.843Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>Dark Knight</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux学习记录</title>
+    <link href="http://example.com/2022/07/30/Linux/"/>
+    <id>http://example.com/2022/07/30/Linux/</id>
+    <published>2022-07-30T08:35:26.000Z</published>
+    <updated>2022-07-30T13:54:47.843Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Linux学习记录&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="编程" scheme="http://example.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="linux" scheme="http://example.com/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>第一篇博客</title>
+    <link href="http://example.com/2022/07/30/First-Blog/"/>
+    <id>http://example.com/2022/07/30/First-Blog/</id>
+    <published>2022-07-30T08:04:58.000Z</published>
+    <updated>2022-07-30T14:23:57.706Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;第一篇博文&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="生活" scheme="http://example.com/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="blog" scheme="http://example.com/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python学习记录</title>
+    <link href="http://example.com/2022/07/30/Python/"/>
+    <id>http://example.com/2022/07/30/Python/</id>
+    <published>2022-07-30T08:04:58.000Z</published>
+    <updated>2022-07-30T14:23:43.498Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Python学习记录&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="编程" scheme="http://example.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://example.com/2022/07/30/hello-world/"/>
+    <id>http://example.com/2022/07/30/hello-world/</id>
+    <published>2022-07-30T04:51:45.285Z</published>
+    <updated>2022-07-30T04:51:45.285Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
