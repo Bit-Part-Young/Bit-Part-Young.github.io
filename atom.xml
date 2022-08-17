@@ -3,23 +3,50 @@
   <title>Seek Another Land</title>
   
   <subtitle>寻找属于自己的小岛</subtitle>
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="http://seekanotherland.xyz/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
-  <updated>2022-07-30T13:54:47.843Z</updated>
-  <id>http://example.com/</id>
+  <link href="http://seekanotherland.xyz/"/>
+  <updated>2022-08-17T14:47:44.502Z</updated>
+  <id>http://seekanotherland.xyz/</id>
   
   <author>
-    <name>Dark Knight</name>
+    <name>Nobody</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>《最优化》笔记</title>
+    <link href="http://seekanotherland.xyz/2022/08/17/con-opt/"/>
+    <id>http://seekanotherland.xyz/2022/08/17/con-opt/</id>
+    <published>2022-08-17T14:44:35.000Z</published>
+    <updated>2022-08-17T14:47:44.502Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="研究生课程" scheme="http://seekanotherland.xyz/categories/%E7%A0%94%E7%A9%B6%E7%94%9F%E8%AF%BE%E7%A8%8B/"/>
+    
+    
+    <category term="学习" scheme="http://seekanotherland.xyz/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="最优化" scheme="http://seekanotherland.xyz/tags/%E6%9C%80%E4%BC%98%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Linux学习记录</title>
-    <link href="http://example.com/2022/07/30/Linux/"/>
-    <id>http://example.com/2022/07/30/Linux/</id>
+    <link href="http://seekanotherland.xyz/2022/07/30/Linux/"/>
+    <id>http://seekanotherland.xyz/2022/07/30/Linux/</id>
     <published>2022-07-30T08:35:26.000Z</published>
     <updated>2022-07-30T13:54:47.843Z</updated>
     
@@ -28,17 +55,17 @@
     
     
     
-    <category term="编程" scheme="http://example.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    <category term="编程" scheme="http://seekanotherland.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
     
     
-    <category term="linux" scheme="http://example.com/tags/linux/"/>
+    <category term="linux" scheme="http://seekanotherland.xyz/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title>第一篇博客</title>
-    <link href="http://example.com/2022/07/30/First-Blog/"/>
-    <id>http://example.com/2022/07/30/First-Blog/</id>
+    <link href="http://seekanotherland.xyz/2022/07/30/First-Blog/"/>
+    <id>http://seekanotherland.xyz/2022/07/30/First-Blog/</id>
     <published>2022-07-30T08:04:58.000Z</published>
     <updated>2022-07-30T14:23:57.706Z</updated>
     
@@ -47,17 +74,17 @@
     
     
     
-    <category term="生活" scheme="http://example.com/categories/%E7%94%9F%E6%B4%BB/"/>
+    <category term="生活" scheme="http://seekanotherland.xyz/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
-    <category term="blog" scheme="http://example.com/tags/blog/"/>
+    <category term="blog" scheme="http://seekanotherland.xyz/tags/blog/"/>
     
   </entry>
   
   <entry>
     <title>Python学习记录</title>
-    <link href="http://example.com/2022/07/30/Python/"/>
-    <id>http://example.com/2022/07/30/Python/</id>
+    <link href="http://seekanotherland.xyz/2022/07/30/Python/"/>
+    <id>http://seekanotherland.xyz/2022/07/30/Python/</id>
     <published>2022-07-30T08:04:58.000Z</published>
     <updated>2022-08-14T17:13:06.738Z</updated>
     
@@ -72,17 +99,17 @@
     
     
     
-    <category term="编程" scheme="http://example.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    <category term="编程" scheme="http://seekanotherland.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
     
     
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    <category term="Python" scheme="http://seekanotherland.xyz/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://example.com/2022/07/30/hello-world/"/>
-    <id>http://example.com/2022/07/30/hello-world/</id>
+    <link href="http://seekanotherland.xyz/2022/07/30/hello-world/"/>
+    <id>http://seekanotherland.xyz/2022/07/30/hello-world/</id>
     <published>2022-07-30T04:51:45.285Z</published>
     <updated>2022-07-30T04:51:45.285Z</updated>
     

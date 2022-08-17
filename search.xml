@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>《最优化》笔记</title>
+      <link href="/2022/08/17/con-opt/"/>
+      <url>/2022/08/17/con-opt/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="最优性条件"><a href="#最优性条件" class="headerlink" title="最优性条件"></a>最优性条件</h1><p>求解非线性最优化问题的基础是掌握最优解满足的必要和充分条件</p><ul><li>无约束优化</li><li>约束优化</li><li>鞍点问题</li></ul><h2 id="无约束问题的极值条件"><a href="#无约束问题的极值条件" class="headerlink" title="无约束问题的极值条件"></a>无约束问题的极值条件</h2><p>无约束最优化问题：<br>$$<br>\text{min}\enspace f(\boldsymbol{x}),\enspace \boldsymbol{x}\in R^{n}<br>$$</p><p><strong>定理</strong>：给 $ \bar{\boldsymbol{x}},\text{s.t.} \enspace f(\boldsymbol{x}) $可微，且$ \exists \boldsymbol{d},\enspace \text{s.t.}\enspace \nabla f(\bar{\boldsymbol{x}})\boldsymbol{d}&lt;0  $，则$ \exists \delta &gt;0,\enspace \text{s.t.} $<br>$$<br>f(\bar{\boldsymbol{x}}+\lambda \boldsymbol{d}) &lt; f(\bar{\boldsymbol{x}}),\enspace \forall \lambda \in (0,\lambda)<br>$$</p><p><strong>定理</strong>（局部极小的一阶必要条件）：$ f(\boldsymbol{x}) $ 在 $ \bar{\boldsymbol{x}} $ 可微，若 $ \bar{\boldsymbol{x}} $ 局部极小，$ \Longrightarrow \nabla f(\bar{\boldsymbol{x}})=\boldsymbol{0} $</p><p><strong>定理</strong>（局部极小的一阶必要条件）：$ f(\boldsymbol{x}) $ 在 $ \bar{\boldsymbol{x}} $ 二次可微，若 $ \bar{\boldsymbol{x}} $ 局部极小，$ \Longrightarrow \nabla ^{2}f(\bar{\boldsymbol{x}}) $ 半正定</p><p><strong>定理</strong>（二阶充分条件）：$ f(\boldsymbol{x}) $ 在 $ \bar{\boldsymbol{x}} $ 二次可微，若 $ \nabla f(\bar{\boldsymbol{x}})=0,\enspace \nabla ^{2}f(\bar{\boldsymbol{x}}) $ 正定$ \Longrightarrow \bar{\boldsymbol{x}} $ 局部极小</p><p><strong>定理</strong>（全局极小的充分必要条件）：$f(\boldsymbol{x}) $ 在 为可微凸函数，则 $ \bar{\boldsymbol{x}} $ 全局极小 $ \iff \nabla f(\bar{\boldsymbol{x}})=0$</p><h2 id="约束极值问题的最优性条件"><a href="#约束极值问题的最优性条件" class="headerlink" title="约束极值问题的最优性条件"></a>约束极值问题的最优性条件</h2><h3 id="约束极值问题"><a href="#约束极值问题" class="headerlink" title="约束极值问题"></a>约束极值问题</h3><p>约束极值问题：<br>$$<br>\begin{equation}<br>    \begin{aligned}<br>        \min &amp;\enspace f(\boldsymbol{x}) \enspace \enspace \boldsymbol{x} \in \mathbb{R}^n\<br>        \text{s.t.} &amp;\enspace g_i (\boldsymbol{x}) \geqslant 0, \enspace i=1,\cdots,m \enspace  \<br>                    &amp;\enspace h_j (\boldsymbol{x}) = 0, \enspace j=1,\cdots,l \enspace \<br>    \end{aligned}<br>\end{equation}<br>$$</p><p>可行集/域：<br>$$<br>S = \lbrace \boldsymbol{x}| g_i ({\boldsymbol{x}}) \geqslant 0 ,\enspace i=1,\cdots,m; \enspace h_i ({\boldsymbol{x}}) = 0 ,\enspace j=1,\cdots,l \rbrace<br>$$</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 研究生课程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习 </tag>
+            
+            <tag> 最优化 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Linux学习记录</title>
       <link href="/2022/07/30/Linux/"/>
       <url>/2022/07/30/Linux/</url>
