@@ -1176,6 +1176,33 @@ plt<span class="token punctuation">.</span>savefig<span class="token punctuation
     </div>
 
     
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '381487769effbb0c5b81',
+        clientSecret: '01d4fe4841d6286c52e9305c493eca01cfc7ecdb',
+        repo: 'Bit-Part-Young.github.io',
+        owner: 'Bit-Part-Young',
+        admin: "Bit-Part-Young",
+        id: '2022-07-30T16-04-58',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+
+    
 
     
 
