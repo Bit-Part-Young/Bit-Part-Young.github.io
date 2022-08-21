@@ -4,18 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="第一篇博客, Seek Another Land">
-    <meta name="description" content="第一篇博文
-
-
-
-
-这是Dark Knight的第一篇blog，期待以后的创作！
-Emojis:
-😄
-😆
-😃  
-">
+    <meta name="keywords" content="把数据结构直接拆分到多个变量中，不要专门通过下标访问, Seek Another Land">
+    <meta name="description" content="Effective Python第6条建议--unpacking（拆分）">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -29,7 +19,7 @@ Emojis:
 
     
 
-    <title>第一篇博客 | Seek Another Land</title>
+    <title>把数据结构直接拆分到多个变量中，不要专门通过下标访问 | Seek Another Land</title>
     <link rel="icon" type="image/png" href="/favicon_rm.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -410,12 +400,12 @@ Emojis:
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">第一篇博客</h1>
+                    <h1 class="description center-align post-title">把数据结构直接拆分到多个变量中，不要专门通过下标访问</h1>
                 </div>
             </div>
         </div>
@@ -531,8 +521,8 @@ Emojis:
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/blog/">
-                                <span class="chip bg-color">blog</span>
+                            <a href="/tags/python/">
+                                <span class="chip bg-color">python</span>
                             </a>
                         
                     </div>
@@ -543,8 +533,8 @@ Emojis:
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%94%9F%E6%B4%BB/" class="post-category">
-                                生活
+                            <a href="/categories/%E7%BC%96%E7%A8%8B/" class="post-category">
+                                编程
                             </a>
                         
                     </div>
@@ -556,21 +546,21 @@ Emojis:
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-07-30
+                    2022-08-22
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-07-30
+                    2022-08-22
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    21
+                    344
                 </div>
                 
 
@@ -600,16 +590,67 @@ Emojis:
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>第一篇博文</p>
-<span id="more"></span>
+                <h1 id="Effective-Python"><a href="#Effective-Python" class="headerlink" title="Effective Python"></a>Effective Python</h1><blockquote>
+<p>书中的代码：<a target="_blank" rel="noopener" href="https://github.com/almazkun/effective_python">https://github.com/almazkun/effective_python</a></p>
+</blockquote>
+<h2 id="第1章-培养Pythonic思维"><a href="#第1章-培养Pythonic思维" class="headerlink" title="第1章 培养Pythonic思维"></a>第1章 培养Pythonic思维</h2><h3 id="第6条-把数据结构直接拆分到多个变量中，不要专门通过下标访问"><a href="#第6条-把数据结构直接拆分到多个变量中，不要专门通过下标访问" class="headerlink" title="第6条 把数据结构直接拆分到多个变量中，不要专门通过下标访问"></a>第6条 把数据结构直接拆分到多个变量中，不要专门通过下标访问</h3><p><strong>unpacking</strong></p>
+<ul>
+<li>拆分，特殊Python语法，可以把数据结构里面的多个值分别赋给相应的变量，只需一行代码</li>
+<li><strong>可以原地交换两个变量</strong></li>
+<li>凡可迭代对象均能拆分，无论里面还有多少层迭代结构</li>
+<li>尽量通过unpacking来拆解序列之中的数据，而不要通过下标访问</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 将元组中的元素分别赋给多个变量</span>
+item <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">"Peanut butter"</span><span class="token punctuation">,</span> <span class="token string">"Jelly"</span><span class="token punctuation">)</span>
+first<span class="token punctuation">,</span> second <span class="token operator">=</span> item <span class="token comment">#Unpacking</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>first<span class="token punctuation">}</span></span><span class="token string"> and </span><span class="token interpolation"><span class="token punctuation">{</span>second<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+
+<span class="token comment"># output</span>
+<span class="token triple-quoted-string string">"""
+Peanut butter and Jelly
+"""</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
-<p>这是Dark Knight的第一篇blog，期待以后的创作！</p>
-<p>Emojis:</p>
-<p><span class="github-emoji"><span>😄</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>
-<p><span class="github-emoji"><span>😆</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>
-<p><span class="github-emoji"><span>😃</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f603.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>  </p>
+
+
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 升序排序算法</span>
+<span class="token keyword">def</span> <span class="token function">bubble_sort</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> _ <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># 若无该循环语句，只会进行一轮循环，不一定使得完全升序</span>
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;</span> a<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+                <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> a<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+                a<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> a<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token comment"># Swap 原地交换两个变量</span>
+
+    <span class="token keyword">return</span> a
+
+names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"pretzels"</span><span class="token punctuation">,</span> <span class="token string">"carrots"</span><span class="token punctuation">,</span> <span class="token string">"arugula"</span><span class="token punctuation">,</span> <span class="token string">"bacon"</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>bubble_sort<span class="token punctuation">(</span>names<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># output</span>
+<span class="token triple-quoted-string string">"""
+['pretzels', 'carrots', 'arugula', 'bacon'] carrots pretzels
+['carrots', 'pretzels', 'arugula', 'bacon'] arugula pretzels
+['carrots', 'arugula', 'pretzels', 'bacon'] bacon pretzels
+['carrots', 'arugula', 'bacon', 'pretzels'] arugula carrots
+['arugula', 'carrots', 'bacon', 'pretzels'] bacon carrots
+['arugula', 'bacon', 'carrots', 'pretzels']
+"""</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 在for循环和enumerate()中使用unpacking</span>
+snacks <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token string">"bacon"</span><span class="token punctuation">,</span> <span class="token number">350</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">"donut"</span><span class="token punctuation">,</span> <span class="token number">240</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">"muffin"</span><span class="token punctuation">,</span> <span class="token number">190</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+<span class="token keyword">for</span> rank<span class="token punctuation">,</span> <span class="token punctuation">(</span>name<span class="token punctuation">,</span> calories<span class="token punctuation">)</span> <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>snacks<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"#</span><span class="token interpolation"><span class="token punctuation">{</span>rank<span class="token punctuation">}</span></span><span class="token string">: </span><span class="token interpolation"><span class="token punctuation">{</span>name<span class="token punctuation">}</span></span><span class="token string"> has </span><span class="token interpolation"><span class="token punctuation">{</span>calories<span class="token punctuation">}</span></span><span class="token string"> calories"</span></span><span class="token punctuation">)</span>
+
+<span class="token comment"># output</span>
+<span class="token triple-quoted-string string">"""
+#1: bacon has 350 calories
+#2: donut has 240 calories
+#3: muffin has 190 calories
+"""</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 
                 
             </div>
@@ -636,7 +677,7 @@ Emojis:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://seekanotherland.xyz/2022/07/30/First-Blog/">http://seekanotherland.xyz/2022/07/30/First-Blog/</a>
+                    <a href="http://seekanotherland.xyz/2022/08/22/effective-pyhton-itme-6/">http://seekanotherland.xyz/2022/08/22/effective-pyhton-itme-6/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -674,8 +715,8 @@ Emojis:
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/blog/">
-                                    <span class="chip bg-color">blog</span>
+                                <a href="/tags/python/">
+                                    <span class="chip bg-color">python</span>
                                 </a>
                             
                         </div>
@@ -846,7 +887,7 @@ Emojis:
         repo: 'Bit-Part-Young.github.io',
         owner: 'Bit-Part-Young',
         admin: "Bit-Part-Young",
-        id: '2022-07-30T16-04-58',
+        id: '2022-08-22T01-26-10',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -876,76 +917,29 @@ Emojis:
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/07/30/Linux/">
+                <a href="/2022/08/22/effective-pyhton-itme-6/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Linux学习记录">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="把数据结构直接拆分到多个变量中，不要专门通过下标访问">
                         
-                        <span class="card-title">Linux学习记录</span>
+                        <span class="card-title">把数据结构直接拆分到多个变量中，不要专门通过下标访问</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Linux学习记录
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-07-30
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E7%BC%96%E7%A8%8B/" class="post-category">
-                                    编程
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/linux/">
-                        <span class="chip bg-color">linux</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2022/07/30/Python/">
-                    <div class="card-image">
-                        
-                        <img src="/medias/featureimages/python.png" class="responsive-img" alt="Python学习记录">
-                        
-                        <span class="card-title">Python学习记录</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            Python学习记录
+                            Effective Python第6条建议--unpacking（拆分）
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-07-30
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-22
                             </span>
                         <span class="publish-author">
                             
@@ -959,11 +953,65 @@ Emojis:
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Python/">
-                        <span class="chip bg-color">Python</span>
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/08/17/con-opt/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="《最优化》笔记">
+                        
+                        <span class="card-title">《最优化》笔记</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            最优化--最优性条件章节
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-17
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%A0%94%E7%A9%B6%E7%94%9F%E8%AF%BE%E7%A8%8B/" class="post-category">
+                                    研究生课程
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">学习</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%9C%80%E4%BC%98%E5%8C%96/">
+                        <span class="chip bg-color">最优化</span>
                     </a>
                     
                 </div>
