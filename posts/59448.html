@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="把数据结构直接拆分到多个变量中，不要专门通过下标访问, Seek Another Land">
-    <meta name="description" content="Effective Python第6条建议--unpacking（拆分）">
+    <meta name="keywords" content="第一篇博客, Seek Another Land">
+    <meta name="description" content="第一篇博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@
 
     
 
-    <title>把数据结构直接拆分到多个变量中，不要专门通过下标访问 | Seek Another Land</title>
+    <title>第一篇博客 | Seek Another Land</title>
     <link rel="icon" type="image/png" href="/favicon_rm.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -35,6 +35,9 @@
 <meta name="generator" content="Hexo 6.2.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
 <link rel="alternate" href="/atom.xml" title="Seek Another Land" type="application/atom+xml">
+<link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
+<script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
+<script src="\assets\js\Meting.min.js" class="meting-script-marker"></script>
 </head>
 
 
@@ -400,12 +403,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">把数据结构直接拆分到多个变量中，不要专门通过下标访问</h1>
+                    <h1 class="description center-align post-title">第一篇博客</h1>
                 </div>
             </div>
         </div>
@@ -521,8 +524,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/python/">
-                                <span class="chip bg-color">python</span>
+                            <a href="/tags/blog/">
+                                <span class="chip bg-color">blog</span>
                             </a>
                         
                     </div>
@@ -533,8 +536,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%BC%96%E7%A8%8B/" class="post-category">
-                                编程
+                            <a href="/categories/%E7%94%9F%E6%B4%BB/" class="post-category">
+                                生活
                             </a>
                         
                     </div>
@@ -546,21 +549,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-08-22
+                    2022-07-30
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-08-22
+                    2022-08-23
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    344
+                    42
                 </div>
                 
 
@@ -590,67 +593,27 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Effective-Python"><a href="#Effective-Python" class="headerlink" title="Effective Python"></a>Effective Python</h1><blockquote>
-<p>书中的代码：<a target="_blank" rel="noopener" href="https://github.com/almazkun/effective_python">https://github.com/almazkun/effective_python</a></p>
-</blockquote>
-<h2 id="第1章-培养Pythonic思维"><a href="#第1章-培养Pythonic思维" class="headerlink" title="第1章 培养Pythonic思维"></a>第1章 培养Pythonic思维</h2><h3 id="第6条-把数据结构直接拆分到多个变量中，不要专门通过下标访问"><a href="#第6条-把数据结构直接拆分到多个变量中，不要专门通过下标访问" class="headerlink" title="第6条 把数据结构直接拆分到多个变量中，不要专门通过下标访问"></a>第6条 把数据结构直接拆分到多个变量中，不要专门通过下标访问</h3><p><strong>unpacking</strong></p>
-<ul>
-<li>拆分，特殊Python语法，可以把数据结构里面的多个值分别赋给相应的变量，只需一行代码</li>
-<li><strong>可以原地交换两个变量</strong></li>
-<li>凡可迭代对象均能拆分，无论里面还有多少层迭代结构</li>
-<li>尽量通过unpacking来拆解序列之中的数据，而不要通过下标访问</li>
-</ul>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 将元组中的元素分别赋给多个变量</span>
-item <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">"Peanut butter"</span><span class="token punctuation">,</span> <span class="token string">"Jelly"</span><span class="token punctuation">)</span>
-first<span class="token punctuation">,</span> second <span class="token operator">=</span> item <span class="token comment">#Unpacking</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>first<span class="token punctuation">}</span></span><span class="token string"> and </span><span class="token interpolation"><span class="token punctuation">{</span>second<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+                <p>这是Nobody的第一篇blog，期待以后的创作！</p>
+<p>Emojis:</p>
+<p><span class="github-emoji"><span>😄</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>
+<p><span class="github-emoji"><span>😆</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>
+<p><span class="github-emoji"><span>😃</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f603.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>  </p>
+<h3 id="博客插入音乐"><a href="#博客插入音乐" class="headerlink" title="博客插入音乐"></a>博客插入音乐</h3>
+    <div id="aplayer-kgcBOgbo" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="1301245903" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>
 
-<span class="token comment"># output</span>
-<span class="token triple-quoted-string string">"""
-Peanut butter and Jelly
-"""</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+<h3 id="博客插入视频："><a href="#博客插入视频：" class="headerlink" title="博客插入视频："></a>博客插入视频：</h3><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
+    <iframe src="//player.bilibili.com/player.html?aid=984726281&amp;bvid=BV1Nt4y1n7hv&amp;cid=807808976&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%;height: 100%; left: 0; top: 0;"> 
+    </iframe>
+</div>
 
 
 
 
 
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 升序排序算法</span>
-<span class="token keyword">def</span> <span class="token function">bubble_sort</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">for</span> _ <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># 若无该循环语句，只会进行一轮循环，不一定使得完全升序</span>
-        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-            <span class="token keyword">if</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;</span> a<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
-                <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> a<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-                a<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> a<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token comment"># Swap 原地交换两个变量</span>
 
-    <span class="token keyword">return</span> a
-
-names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"pretzels"</span><span class="token punctuation">,</span> <span class="token string">"carrots"</span><span class="token punctuation">,</span> <span class="token string">"arugula"</span><span class="token punctuation">,</span> <span class="token string">"bacon"</span><span class="token punctuation">]</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>bubble_sort<span class="token punctuation">(</span>names<span class="token punctuation">)</span><span class="token punctuation">)</span>
-
-<span class="token comment"># output</span>
-<span class="token triple-quoted-string string">"""
-['pretzels', 'carrots', 'arugula', 'bacon'] carrots pretzels
-['carrots', 'pretzels', 'arugula', 'bacon'] arugula pretzels
-['carrots', 'arugula', 'pretzels', 'bacon'] bacon pretzels
-['carrots', 'arugula', 'bacon', 'pretzels'] arugula carrots
-['arugula', 'carrots', 'bacon', 'pretzels'] bacon carrots
-['arugula', 'bacon', 'carrots', 'pretzels']
-"""</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 在for循环和enumerate()中使用unpacking</span>
-snacks <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token string">"bacon"</span><span class="token punctuation">,</span> <span class="token number">350</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">"donut"</span><span class="token punctuation">,</span> <span class="token number">240</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">"muffin"</span><span class="token punctuation">,</span> <span class="token number">190</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
-<span class="token keyword">for</span> rank<span class="token punctuation">,</span> <span class="token punctuation">(</span>name<span class="token punctuation">,</span> calories<span class="token punctuation">)</span> <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>snacks<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"#</span><span class="token interpolation"><span class="token punctuation">{</span>rank<span class="token punctuation">}</span></span><span class="token string">: </span><span class="token interpolation"><span class="token punctuation">{</span>name<span class="token punctuation">}</span></span><span class="token string"> has </span><span class="token interpolation"><span class="token punctuation">{</span>calories<span class="token punctuation">}</span></span><span class="token string"> calories"</span></span><span class="token punctuation">)</span>
-
-<span class="token comment"># output</span>
-<span class="token triple-quoted-string string">"""
-#1: bacon has 350 calories
-#2: donut has 240 calories
-#3: muffin has 190 calories
-"""</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+<h3 id="外链"><a href="#外链" class="headerlink" title="外链"></a>外链</h3><p>测试链接：<a target="_blank" rel="noopener" href="https://blog.liguapi.top/2022/03/07/page-1/">https://blog.liguapi.top/2022/03/07/page-1/</a></p>
 
                 
             </div>
@@ -677,7 +640,7 @@ snacks <span class="token operator">=</span> <span class="token punctuation">[</
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://seekanotherland.xyz/2022/08/22/effective-pyhton-itme-6/">http://seekanotherland.xyz/2022/08/22/effective-pyhton-itme-6/</a>
+                    <a href="http://seekanotherland.xyz/posts/59448.html">http://seekanotherland.xyz/posts/59448.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -715,8 +678,8 @@ snacks <span class="token operator">=</span> <span class="token punctuation">[</
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/python/">
-                                    <span class="chip bg-color">python</span>
+                                <a href="/tags/blog/">
+                                    <span class="chip bg-color">blog</span>
                                 </a>
                             
                         </div>
@@ -868,44 +831,228 @@ snacks <span class="token operator">=</span> <span class="token punctuation">[</
     </div>
 
     
-        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
-<link rel="stylesheet" href="/css/my-gitalk.css">
 
-<div class="card gitalk-card" data-aos="fade-up">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .waline-card {
+        margin: 1.5rem auto;
+    }
+    .waline-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #waline p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+    #waline blockquote p {
+        text-indent: 0.2rem;
+    }
+    #waline a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+    #waline img {
+        max-width: 100%;
+        cursor: pointer;
+    }
+    #waline ol li {
+        list-style-type: decimal;
+    }
+    #waline ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+    #waline ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+    #waline ul li {
+        list-style-type: disc;
+    }
+    #waline ul ul li {
+        list-style-type: circle;
+    }
+    #waline table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+    #waline table, th, td {
+        border: 0;
+    }
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+    #waline table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+    #waline table td {
+        min-width: 80px;
+    }
+    #waline h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+    #waline h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+    #waline h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+    #waline h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+    #waline h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+    #waline h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+    #waline p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    #waline hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+    #waline blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+    #waline pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+    #waline code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+    #waline pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+    #waline pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+    #waline code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+    #waline [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+    #waline b,
+    strong {
+        font-weight: bold;
+    }
+    #waline dfn {
+        font-style: italic;
+    }
+    #waline small {
+        font-size: 85%;
+    }
+    #waline cite {
+        font-style: normal;
+    }
+    #waline mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+    #waline table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+    #waline table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+    #waline table td {
+        min-width: 80px;
+    }
+    #waline [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+  </style>
+  
+  <div class="card waline-card" data-aos="fade-up">
     <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
         <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
         <span>评论</span>
     </div>
-    <div id="gitalk-container" class="card-content"></div>
-</div>
+    <div id="waline" class="card-content" style="display: grid">
+    </div>
+  </div>
+  
 
-<script src="/libs/gitalk/gitalk.min.js"></script>
-<script>
-    let gitalk = new Gitalk({
-        clientID: '381487769effbb0c5b81',
-        clientSecret: '01d4fe4841d6286c52e9305c493eca01cfc7ecdb',
-        repo: 'Bit-Part-Young.github.io',
-        owner: 'Bit-Part-Young',
-        admin: "Bit-Part-Young",
-        id: '2022-08-22T01-26-10',
-        distractionFreeMode: false  // Facebook-like distraction free mode
+  <!-- <script src="//cdn.jsdelivr.net/npm/@waline/client"></script> -->
+  <script src="/libs/waline/Waline.min.js"></script>
+  <script>
+    new Waline({
+        el: '#waline',
+        serverURL: 'https://waline.seekanotherland.xyz',
+        avatar: 'mm'    
     });
-
-    gitalk.render('gitalk-container');
-</script>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
+  </script> 
     
 
     
@@ -917,30 +1064,29 @@ snacks <span class="token operator">=</span> <span class="token punctuation">[</
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/08/22/effective-pyhton-itme-6/">
+                <a href="/posts/undefined.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="把数据结构直接拆分到多个变量中，不要专门通过下标访问">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Linux学习记录">
                         
-                        <span class="card-title">把数据结构直接拆分到多个变量中，不要专门通过下标访问</span>
+                        <span class="card-title">Linux学习记录</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Effective Python第6条建议--unpacking（拆分）
+                            Linux学习记录
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-22
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-07-30
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -953,12 +1099,11 @@ snacks <span class="token operator">=</span> <span class="token punctuation">[</
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/python/">
-                        <span class="chip bg-color">python</span>
+                    <a href="/tags/linux/">
+                        <span class="chip bg-color">linux</span>
                     </a>
                     
                 </div>
@@ -972,31 +1117,30 @@ snacks <span class="token operator">=</span> <span class="token punctuation">[</
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/08/17/con-opt/">
+                <a href="/posts/undefined.html">
                     <div class="card-image">
                         
+                        <img src="/medias/featureimages/python.png" class="responsive-img" alt="Python学习记录">
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="《最优化》笔记">
-                        
-                        <span class="card-title">《最优化》笔记</span>
+                        <span class="card-title">Python学习记录</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            最优化--最优性条件章节
+                            Python学习记录
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-07-30
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%A0%94%E7%A9%B6%E7%94%9F%E8%AF%BE%E7%A8%8B/" class="post-category">
-                                    研究生课程
+                            <a href="/categories/%E7%BC%96%E7%A8%8B/" class="post-category">
+                                    编程
                                 </a>
                             
                             
@@ -1006,12 +1150,8 @@ snacks <span class="token operator">=</span> <span class="token punctuation">[</
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">学习</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%9C%80%E4%BC%98%E5%8C%96/">
-                        <span class="chip bg-color">最优化</span>
+                    <a href="/tags/Python/">
+                        <span class="chip bg-color">Python</span>
                     </a>
                     
                 </div>
@@ -1243,7 +1383,7 @@ snacks <span class="token operator">=</span> <span class="token punctuation">[</
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">5.3k</span>
+                        class="white-color">5.4k</span>
             
             
             
@@ -1475,6 +1615,48 @@ $(function () {
         <i class="fas fa-arrow-up"></i>
     </a>
 </div>
+
+
+    <!-- 白天和黑夜主题 -->
+<div class="sum-moon-box">
+  <a class="btn-floating btn-large waves-effect waves-light" onclick="switchNightMode()" title="切换主题" >
+    <i id="sum-moon-icon" class="fas fa-sun" style="width:48px; height:48px; font-size: 28px;"></i>
+  </a>
+</div>
+
+<script>
+  function switchNightMode() {
+    $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+      setTimeout(function () {
+        $('body').hasClass('DarkMode') 
+        ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+        : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+          
+        setTimeout(function () {
+          $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+            $(this).remove()
+          })
+        }, 2e3)
+      })
+  }
+</script>
+
+<div class="stars-con">
+  <div id="stars"></div>
+  <div id="stars2"></div>
+  <div id="stars3"></div>  
+</div>
+    /* 模式判断 */
+    <script>
+        /* 模式判断 */
+        if (localStorage.getItem('isDark') === '1') {
+            document.body.classList.add('DarkMode');
+            $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')
+        } else {
+            document.body.classList.remove('DarkMode');
+            $('#sum-moon-icon').removeleClass("fa-sun").addClass('fa-moon')
+        }
+    </script>
 
 
     <script src="/libs/materialize/materialize.min.js"></script>

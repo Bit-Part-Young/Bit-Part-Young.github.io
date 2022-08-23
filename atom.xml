@@ -6,7 +6,7 @@
   <link href="http://seekanotherland.xyz/atom.xml" rel="self"/>
   
   <link href="http://seekanotherland.xyz/"/>
-  <updated>2022-08-21T17:29:54.475Z</updated>
+  <updated>2022-08-23T15:03:26.842Z</updated>
   <id>http://seekanotherland.xyz/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>把数据结构直接拆分到多个变量中，不要专门通过下标访问</title>
-    <link href="http://seekanotherland.xyz/2022/08/22/effective-pyhton-itme-6/"/>
-    <id>http://seekanotherland.xyz/2022/08/22/effective-pyhton-itme-6/</id>
+    <link href="http://seekanotherland.xyz/posts/58088.html"/>
+    <id>http://seekanotherland.xyz/posts/58088.html</id>
     <published>2022-08-21T17:26:10.000Z</published>
-    <updated>2022-08-21T17:29:54.475Z</updated>
+    <updated>2022-08-23T15:03:26.842Z</updated>
     
     
       
@@ -43,10 +43,10 @@
   
   <entry>
     <title>《最优化》笔记</title>
-    <link href="http://seekanotherland.xyz/2022/08/17/con-opt/"/>
-    <id>http://seekanotherland.xyz/2022/08/17/con-opt/</id>
+    <link href="http://seekanotherland.xyz/posts/6838.html"/>
+    <id>http://seekanotherland.xyz/posts/6838.html</id>
     <published>2022-08-17T14:44:35.000Z</published>
-    <updated>2022-08-17T14:47:44.502Z</updated>
+    <updated>2022-08-23T15:03:03.993Z</updated>
     
     
       
@@ -70,8 +70,8 @@
   
   <entry>
     <title>Linux学习记录</title>
-    <link href="http://seekanotherland.xyz/2022/07/30/Linux/"/>
-    <id>http://seekanotherland.xyz/2022/07/30/Linux/</id>
+    <link href="http://seekanotherland.xyz/posts/undefined.html"/>
+    <id>http://seekanotherland.xyz/posts/undefined.html</id>
     <published>2022-07-30T08:35:26.000Z</published>
     <updated>2022-07-30T13:54:47.843Z</updated>
     
@@ -89,13 +89,19 @@
   
   <entry>
     <title>第一篇博客</title>
-    <link href="http://seekanotherland.xyz/2022/07/30/First-Blog/"/>
-    <id>http://seekanotherland.xyz/2022/07/30/First-Blog/</id>
+    <link href="http://seekanotherland.xyz/posts/59448.html"/>
+    <id>http://seekanotherland.xyz/posts/59448.html</id>
     <published>2022-07-30T08:04:58.000Z</published>
-    <updated>2022-07-30T14:23:57.706Z</updated>
+    <updated>2022-08-23T15:03:17.156Z</updated>
     
     
-    <summary type="html">&lt;p&gt;第一篇博文&lt;/p&gt;</summary>
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
     
     
     
@@ -108,8 +114,8 @@
   
   <entry>
     <title>Python学习记录</title>
-    <link href="http://seekanotherland.xyz/2022/07/30/Python/"/>
-    <id>http://seekanotherland.xyz/2022/07/30/Python/</id>
+    <link href="http://seekanotherland.xyz/posts/undefined.html"/>
+    <id>http://seekanotherland.xyz/posts/undefined.html</id>
     <published>2022-07-30T08:04:58.000Z</published>
     <updated>2022-08-14T17:13:06.738Z</updated>
     
@@ -133,8 +139,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://seekanotherland.xyz/2022/07/30/hello-world/"/>
-    <id>http://seekanotherland.xyz/2022/07/30/hello-world/</id>
+    <link href="http://seekanotherland.xyz/posts/undefined.html"/>
+    <id>http://seekanotherland.xyz/posts/undefined.html</id>
     <published>2022-07-30T04:51:45.285Z</published>
     <updated>2022-07-30T04:51:45.285Z</updated>
     
