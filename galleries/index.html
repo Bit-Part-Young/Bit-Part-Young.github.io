@@ -392,7 +392,7 @@
             
             <div class="col s6 m4 l4 xl3 gallery-box">
                 <a href="./Films-TV Gallery" class="gallery-item" data-aos="zoom-in-up">
-                     <div class="gallery-cover-box" style="background-image: url(https://img.pterclub.com/images/2022/08/25/BB1.jpg);">
+                     <div class="gallery-cover-box" style="background-image: url(/medias/films-tv_gallery/BB1.jpg);">
                     </div>
                     <p class="gallery-name">
                         Films-TV Gallery
@@ -403,7 +403,7 @@
             
             <div class="col s6 m4 l4 xl3 gallery-box">
                 <a href="./Travel Gallery" class="gallery-item" data-aos="zoom-in-up">
-                     <div class="gallery-cover-box" style="background-image: url(https://img.pterclub.com/images/2022/08/25/travel1.jpg);">
+                     <div class="gallery-cover-box" style="background-image: url(/medias/travel_gallery/travel1.jpg);">
                     </div>
                     <p class="gallery-name">
                         Travel Gallery
@@ -414,7 +414,7 @@
             
             <div class="col s6 m4 l4 xl3 gallery-box">
                 <a href="./Life Gallery" class="gallery-item" data-aos="zoom-in-up">
-                     <div class="gallery-cover-box" style="background-image: url(https://img.pterclub.com/images/2022/08/25/life1.jpg);">
+                     <div class="gallery-cover-box" style="background-image: url(/medias/life_gallery/life1.jpg);">
                     </div>
                     <p class="gallery-name">
                         Life Gallery
@@ -425,7 +425,7 @@
             
             <div class="col s6 m4 l4 xl3 gallery-box">
                 <a href="./Preferred-Actress Gallery" class="gallery-item" data-aos="zoom-in-up">
-                     <div class="gallery-cover-box" style="background-image: url(https://img.pterclub.com/images/2022/08/25/livtylor1.png);">
+                     <div class="gallery-cover-box" style="background-image: url(/medias/actress_gallery/masami1.jpg);">
                     </div>
                     <p class="gallery-name">
                         Preferred-Actress Gallery
@@ -499,7 +499,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">5.1k</span>
+                        class="white-color">5.2k</span>
             
             
             
@@ -766,6 +766,34 @@ $(function () {
         }
     </script>
 
+	
+	<script type="text/javascript">
+        window.onload = function(){
+            //屏蔽键盘事件
+            document.onkeydown = function (){
+                var e = window.event || arguments[0];
+                //F12
+                if(e.keyCode == 123){
+                    return false;
+                //Ctrl+Shift+I
+                }else if((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)){
+                    return false;
+                //Shift+F10
+                }else if((e.shiftKey) && (e.keyCode == 121)){
+                    return false;
+                //Ctrl+U
+                }else if((e.ctrlKey) && (e.keyCode == 85)){
+                    return false;
+                }
+            };
+            //屏蔽鼠标右键
+            document.oncontextmenu = function (){
+                return false;
+            }
+        }
+	</script>
+
+	
 
     <script src="/libs/materialize/materialize.min.js"></script>
     <script src="/libs/masonry/masonry.pkgd.min.js"></script>
@@ -846,3 +874,5 @@ $(function () {
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":190,"hOffset":50,"vOffset":-5},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
 
 </html>
+
+

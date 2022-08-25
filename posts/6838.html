@@ -501,7 +501,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    169
+                    175
                 </div>
                 
 
@@ -540,6 +540,10 @@
 <h2 id="无约束问题的极值条件"><a href="#无约束问题的极值条件" class="headerlink" title="无约束问题的极值条件"></a>无约束问题的极值条件</h2><p>无约束最优化问题：<br>$$<br>\text{min}\enspace f({x}),\enspace {x}\in R^{n}<br>$$</p>
 <h2 id="约束极值问题的最优性条件"><a href="#约束极值问题的最优性条件" class="headerlink" title="约束极值问题的最优性条件"></a>约束极值问题的最优性条件</h2><h3 id="约束极值问题"><a href="#约束极值问题" class="headerlink" title="约束极值问题"></a>约束极值问题</h3><p>约束极值问题：<br>$$<br>\begin{equation}<br>    \begin{aligned}<br>        \min &amp;\enspace f({x}) \enspace \enspace {x} \in \mathbb{R}^n\<br>        \text{s.t.} &amp;\enspace g_i ({x}) \geqslant 0, \enspace i=1,\cdots,m \enspace  \<br>                    &amp;\enspace h_j ({x}) = 0, \enspace j=1,\cdots,l \enspace \<br>    \end{aligned}<br>\end{equation}<br>$$</p>
 <p>可行集/域：<br>$$<br>S = \lbrace {x}| g_i () \geqslant 0 ,\enspace i=1,\cdots,m; \enspace h_i () = 0 ,\enspace j=1,\cdots,l \rbrace<br>$$</p>
+<p>$ a = b + c$</p>
+<p>$\alpha$</p>
+<p>$\beta$</p>
+<p>$\gamma$</p>
 
                 
             </div>
@@ -983,6 +987,13 @@
         avatar: 'mm'    
     });
   </script> 
+  
+  <!-- 直达评论 -->
+<div id="to_comment" class="comment-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#waline" title="直达评论">
+        <i class="fas fa-comments"></i>
+    </a>
+</div>
     
 
     
@@ -1314,7 +1325,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">5.1k</span>
+                        class="white-color">5.2k</span>
             
             
             
@@ -1581,6 +1592,34 @@ $(function () {
         }
     </script>
 
+	
+	<script type="text/javascript">
+        window.onload = function(){
+            //屏蔽键盘事件
+            document.onkeydown = function (){
+                var e = window.event || arguments[0];
+                //F12
+                if(e.keyCode == 123){
+                    return false;
+                //Ctrl+Shift+I
+                }else if((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)){
+                    return false;
+                //Shift+F10
+                }else if((e.shiftKey) && (e.keyCode == 121)){
+                    return false;
+                //Ctrl+U
+                }else if((e.ctrlKey) && (e.keyCode == 85)){
+                    return false;
+                }
+            };
+            //屏蔽鼠标右键
+            document.oncontextmenu = function (){
+                return false;
+            }
+        }
+	</script>
+
+	
 
     <script src="/libs/materialize/materialize.min.js"></script>
     <script src="/libs/masonry/masonry.pkgd.min.js"></script>
@@ -1661,3 +1700,5 @@ $(function () {
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":190,"hOffset":50,"vOffset":-5},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
 
 </html>
+
+

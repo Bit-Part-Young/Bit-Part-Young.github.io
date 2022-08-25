@@ -493,14 +493,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-08-24
+                    2022-08-26
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    42
+                    71
                 </div>
                 
 
@@ -536,7 +536,7 @@
 <p><span class="github-emoji"><span>😆</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>
 <p><span class="github-emoji"><span>😃</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f603.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>  </p>
 <h3 id="博客插入音乐"><a href="#博客插入音乐" class="headerlink" title="博客插入音乐"></a>博客插入音乐</h3>
-    <div id="aplayer-zZreZpZn" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="1301245903" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>
+    <div id="aplayer-KJOEqQbc" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="1301245903" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>
 
 
 
@@ -551,7 +551,30 @@
 
 
 <h3 id="外链"><a href="#外链" class="headerlink" title="外链"></a>外链</h3><p>测试链接：<a target="_blank" rel="noopener" href="https://blog.liguapi.top/2022/03/07/page-1/">https://blog.liguapi.top/2022/03/07/page-1/</a></p>
+<h3 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h3><p>$\alpha$</p>
+<p>$\beta$</p>
+<p>$\gamma$</p>
+<h3 id="折叠功能"><a href="#折叠功能" class="headerlink" title="折叠功能"></a>折叠功能</h3><div class="spoiler collapsed">
+    <div class="spoiler-title">
+        点击显/隐内容
+    </div>
+    <div class="spoiler-content">
+        <p>内容测试</p>
 
+    </div>
+</div>
+
+<div class="spoiler collapsed">
+    <div class="spoiler-title">
+        点击显/隐内容
+    </div>
+    <div class="spoiler-content">
+        <p>内容测试</p>
+
+    </div>
+</div>
+
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
                 
             </div>
             <hr/>
@@ -990,6 +1013,13 @@
         avatar: 'mm'    
     });
   </script> 
+  
+  <!-- 直达评论 -->
+<div id="to_comment" class="comment-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#waline" title="直达评论">
+        <i class="fas fa-comments"></i>
+    </a>
+</div>
     
 
     
@@ -1320,7 +1350,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">5.1k</span>
+                        class="white-color">5.2k</span>
             
             
             
@@ -1587,6 +1617,34 @@ $(function () {
         }
     </script>
 
+	
+	<script type="text/javascript">
+        window.onload = function(){
+            //屏蔽键盘事件
+            document.onkeydown = function (){
+                var e = window.event || arguments[0];
+                //F12
+                if(e.keyCode == 123){
+                    return false;
+                //Ctrl+Shift+I
+                }else if((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)){
+                    return false;
+                //Shift+F10
+                }else if((e.shiftKey) && (e.keyCode == 121)){
+                    return false;
+                //Ctrl+U
+                }else if((e.ctrlKey) && (e.keyCode == 85)){
+                    return false;
+                }
+            };
+            //屏蔽鼠标右键
+            document.oncontextmenu = function (){
+                return false;
+            }
+        }
+	</script>
+
+	
 
     <script src="/libs/materialize/materialize.min.js"></script>
     <script src="/libs/masonry/masonry.pkgd.min.js"></script>
@@ -1667,3 +1725,5 @@ $(function () {
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":190,"hOffset":50,"vOffset":-5},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
 
 </html>
+
+
