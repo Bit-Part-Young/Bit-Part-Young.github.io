@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="把数据结构直接拆分到多个变量中，不要专门通过下标访问, Seek Another Land">
-    <meta name="description" content="Effective Python第6条建议--unpacking（拆分）">
+    <meta name="keywords" content="VSCode常用插件, Seek Another Land">
+    <meta name="description" content="VSCode常用插件">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@
 
     
 
-    <title>把数据结构直接拆分到多个变量中，不要专门通过下标访问 | Seek Another Land</title>
+    <title>VSCode常用插件 | Seek Another Land</title>
     <link rel="icon" type="image/jpeg" href="https://img.pterclub.com/images/2022/08/25/favicon_rm.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -529,12 +529,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://img.pterclub.com/images/2022/08/26/spider19.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://img.pterclub.com/images/2022/08/26/spider12.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">把数据结构直接拆分到多个变量中，不要专门通过下标访问</h1>
+                    <h1 class="description center-align post-title">VSCode常用插件</h1>
                 </div>
             </div>
         </div>
@@ -650,8 +650,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/python/">
-                                <span class="chip bg-color">python</span>
+                            <a href="/tags/vscode/">
+                                <span class="chip bg-color">vscode</span>
                             </a>
                         
                     </div>
@@ -666,6 +666,10 @@
                                 编程
                             </a>
                         
+                            <a href="/categories/%E7%BC%96%E7%A8%8B/%E7%A7%91%E7%A0%94%E5%B7%A5%E5%85%B7/" class="post-category">
+                                科研工具
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -675,7 +679,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-08-22
+                    2022-08-26
                 </div>
                 
 
@@ -689,7 +693,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    344
+                    213
                 </div>
                 
 
@@ -724,68 +728,13 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Effective-Python"><a href="#Effective-Python" class="headerlink" title="Effective Python"></a>Effective Python</h1><blockquote>
-<p>书中的代码：<a target="_blank" rel="noopener" href="https://github.com/almazkun/effective_python">https://github.com/almazkun/effective_python</a></p>
-</blockquote>
-<h2 id="第1章-培养Pythonic思维"><a href="#第1章-培养Pythonic思维" class="headerlink" title="第1章 培养Pythonic思维"></a>第1章 培养Pythonic思维</h2><h3 id="第6条-把数据结构直接拆分到多个变量中，不要专门通过下标访问"><a href="#第6条-把数据结构直接拆分到多个变量中，不要专门通过下标访问" class="headerlink" title="第6条 把数据结构直接拆分到多个变量中，不要专门通过下标访问"></a>第6条 把数据结构直接拆分到多个变量中，不要专门通过下标访问</h3><p><strong>unpacking</strong></p>
-<ul>
-<li>拆分，特殊Python语法，可以把数据结构里面的多个值分别赋给相应的变量，只需一行代码</li>
-<li><strong>可以原地交换两个变量</strong></li>
-<li>凡可迭代对象均能拆分，无论里面还有多少层迭代结构</li>
-<li>尽量通过unpacking来拆解序列之中的数据，而不要通过下标访问</li>
-</ul>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 将元组中的元素分别赋给多个变量</span>
-item <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">"Peanut butter"</span><span class="token punctuation">,</span> <span class="token string">"Jelly"</span><span class="token punctuation">)</span>
-first<span class="token punctuation">,</span> second <span class="token operator">=</span> item <span class="token comment">#Unpacking</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>first<span class="token punctuation">}</span></span><span class="token string"> and </span><span class="token interpolation"><span class="token punctuation">{</span>second<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
-
-<span class="token comment"># output</span>
-<span class="token triple-quoted-string string">"""
-Peanut butter and Jelly
-"""</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-
-
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 升序排序算法</span>
-<span class="token keyword">def</span> <span class="token function">bubble_sort</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">for</span> _ <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># 若无该循环语句，只会进行一轮循环，不一定使得完全升序</span>
-        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-            <span class="token keyword">if</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;</span> a<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
-                <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> a<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-                a<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> a<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token comment"># Swap 原地交换两个变量</span>
-
-    <span class="token keyword">return</span> a
-
-names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"pretzels"</span><span class="token punctuation">,</span> <span class="token string">"carrots"</span><span class="token punctuation">,</span> <span class="token string">"arugula"</span><span class="token punctuation">,</span> <span class="token string">"bacon"</span><span class="token punctuation">]</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>bubble_sort<span class="token punctuation">(</span>names<span class="token punctuation">)</span><span class="token punctuation">)</span>
-
-<span class="token comment"># output</span>
-<span class="token triple-quoted-string string">"""
-['pretzels', 'carrots', 'arugula', 'bacon'] carrots pretzels
-['carrots', 'pretzels', 'arugula', 'bacon'] arugula pretzels
-['carrots', 'arugula', 'pretzels', 'bacon'] bacon pretzels
-['carrots', 'arugula', 'bacon', 'pretzels'] arugula carrots
-['arugula', 'carrots', 'bacon', 'pretzels'] bacon carrots
-['arugula', 'bacon', 'carrots', 'pretzels']
-"""</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 在for循环和enumerate()中使用unpacking</span>
-snacks <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token string">"bacon"</span><span class="token punctuation">,</span> <span class="token number">350</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">"donut"</span><span class="token punctuation">,</span> <span class="token number">240</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">"muffin"</span><span class="token punctuation">,</span> <span class="token number">190</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
-<span class="token keyword">for</span> rank<span class="token punctuation">,</span> <span class="token punctuation">(</span>name<span class="token punctuation">,</span> calories<span class="token punctuation">)</span> <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>snacks<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"#</span><span class="token interpolation"><span class="token punctuation">{</span>rank<span class="token punctuation">}</span></span><span class="token string">: </span><span class="token interpolation"><span class="token punctuation">{</span>name<span class="token punctuation">}</span></span><span class="token string"> has </span><span class="token interpolation"><span class="token punctuation">{</span>calories<span class="token punctuation">}</span></span><span class="token string"> calories"</span></span><span class="token punctuation">)</span>
-
-<span class="token comment"># output</span>
-<span class="token triple-quoted-string string">"""
-#1: bacon has 350 calories
-#2: donut has 240 calories
-#3: muffin has 190 calories
-"""</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+                <h1 id="VSCode常用插件-x2F-扩展"><a href="#VSCode常用插件-x2F-扩展" class="headerlink" title="VSCode常用插件/扩展"></a>VSCode常用插件/扩展</h1><h2 id="Vim"><a href="#Vim" class="headerlink" title="Vim"></a>Vim</h2><p>可以实现在VScode中使用vim文本编辑器，省去在linux中配置vim步骤；如果对vim使用较熟练的话，还是非常好用的</p>
+<h2 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h2><p>识别安装的python环境，函数、参数自动补全，可直接或跳转查看函数帮助，非常好用</p>
+<h2 id="TabOut"><a href="#TabOut" class="headerlink" title="TabOut"></a>TabOut</h2><p>使用场景：</p>
+<p>使用VSCode敲代码时，经常会用到函数、列表和字符串等。引号和括号（小括号、大括号和中括号）成对出现，正常情况下跳转右括号和右引号需要按右箭头，但右箭头离主键盘较远，按起来不是很方便。因此需要一种方便跳转右括号和右引号的方式</p>
+<h2 id="Remote-Development"><a href="#Remote-Development" class="headerlink" title="Remote Development"></a>Remote Development</h2><p>远程连接服务器和超算的扩展套件</p>
+<h2 id="Lammps-Syntax-Highlighting"><a href="#Lammps-Syntax-Highlighting" class="headerlink" title="Lammps Syntax Highlighting"></a>Lammps Syntax Highlighting</h2><p>Lammps语法命令高亮</p>
+<h2 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h2><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
                 
             </div>
             <hr/>
@@ -811,7 +760,7 @@ snacks <span class="token operator">=</span> <span class="token punctuation">[</
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://seekanotherland.xyz/posts/58088.html">http://seekanotherland.xyz/posts/58088.html</a>
+                    <a href="http://seekanotherland.xyz/posts/18925.html">http://seekanotherland.xyz/posts/18925.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -849,8 +798,8 @@ snacks <span class="token operator">=</span> <span class="token punctuation">[</
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/python/">
-                                    <span class="chip bg-color">python</span>
+                                <a href="/tags/vscode/">
+                                    <span class="chip bg-color">vscode</span>
                                 </a>
                             
                         </div>
@@ -1246,19 +1195,19 @@ snacks <span class="token operator">=</span> <span class="token punctuation">[</
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/54196.html">
+                <a href="/posts/36354.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://img.pterclub.com/images/2022/08/26/spider11.png" class="responsive-img" alt="用Atomate计算弹性常数">
+                        <img src="https://img.pterclub.com/images/2022/08/26/spider19.png" class="responsive-img" alt="FFmpeg+Shell批量图片转gif">
                         
-                        <span class="card-title">用Atomate计算弹性常数</span>
+                        <span class="card-title">FFmpeg+Shell批量图片转gif</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            用Atomate计算弹性常数
+                            FFmpeg+Shell批量图片转gif
                         
                     </div>
                     <div class="publish-info">
@@ -1269,12 +1218,8 @@ snacks <span class="token operator">=</span> <span class="token punctuation">[</
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%A7%91%E7%A0%94/" class="post-category">
-                                    科研
-                                </a>
-                            
-                            <a href="/categories/%E7%A7%91%E7%A0%94/%E9%AB%98%E9%80%9A%E9%87%8F/" class="post-category">
-                                    高通量
+                            <a href="/categories/%E7%BC%96%E7%A8%8B/" class="post-category">
+                                    编程
                                 </a>
                             
                             
@@ -1284,16 +1229,12 @@ snacks <span class="token operator">=</span> <span class="token punctuation">[</
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/python/">
-                        <span class="chip bg-color">python</span>
+                    <a href="/tags/FFmpeg/">
+                        <span class="chip bg-color">FFmpeg</span>
                     </a>
                     
-                    <a href="/tags/Atomate/">
-                        <span class="chip bg-color">Atomate</span>
-                    </a>
-                    
-                    <a href="/tags/mongodb/">
-                        <span class="chip bg-color">mongodb</span>
+                    <a href="/tags/shell/">
+                        <span class="chip bg-color">shell</span>
                     </a>
                     
                 </div>
@@ -1307,31 +1248,31 @@ snacks <span class="token operator">=</span> <span class="token punctuation">[</
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/6838.html">
+                <a href="/posts/10457.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://img.pterclub.com/images/2022/08/26/spider2.jpg" class="responsive-img" alt="最优化--最优性条件">
+                        <img src="https://img.pterclub.com/images/2022/08/26/spider6.png" class="responsive-img" alt="shell学习教程">
                         
-                        <span class="card-title">最优化--最优性条件</span>
+                        <span class="card-title">shell学习教程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            《最优化》笔记
+                            shell学习记录：字符串和流程控制
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-26
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    学习
+                            <a href="/categories/%E7%BC%96%E7%A8%8B/" class="post-category">
+                                    编程
                                 </a>
                             
                             
@@ -1341,12 +1282,8 @@ snacks <span class="token operator">=</span> <span class="token punctuation">[</
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%9C%80%E4%BC%98%E5%8C%96/">
-                        <span class="chip bg-color">最优化</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%95%B0%E5%AD%A6/">
-                        <span class="chip bg-color">数学</span>
+                    <a href="/tags/shell/">
+                        <span class="chip bg-color">shell</span>
                     </a>
                     
                 </div>

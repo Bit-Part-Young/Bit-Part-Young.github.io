@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="把数据结构直接拆分到多个变量中，不要专门通过下标访问, Seek Another Land">
-    <meta name="description" content="Effective Python第6条建议--unpacking（拆分）">
+    <meta name="keywords" content="用Atomate计算弹性常数, Seek Another Land">
+    <meta name="description" content="用Atomate计算弹性常数">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@
 
     
 
-    <title>把数据结构直接拆分到多个变量中，不要专门通过下标访问 | Seek Another Land</title>
+    <title>用Atomate计算弹性常数 | Seek Another Land</title>
     <link rel="icon" type="image/jpeg" href="https://img.pterclub.com/images/2022/08/25/favicon_rm.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -529,12 +529,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://img.pterclub.com/images/2022/08/26/spider19.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://img.pterclub.com/images/2022/08/26/spider11.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">把数据结构直接拆分到多个变量中，不要专门通过下标访问</h1>
+                    <h1 class="description center-align post-title">用Atomate计算弹性常数</h1>
                 </div>
             </div>
         </div>
@@ -654,6 +654,14 @@
                                 <span class="chip bg-color">python</span>
                             </a>
                         
+                            <a href="/tags/Atomate/">
+                                <span class="chip bg-color">Atomate</span>
+                            </a>
+                        
+                            <a href="/tags/mongodb/">
+                                <span class="chip bg-color">mongodb</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -662,8 +670,12 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%BC%96%E7%A8%8B/" class="post-category">
-                                编程
+                            <a href="/categories/%E7%A7%91%E7%A0%94/" class="post-category">
+                                科研
+                            </a>
+                        
+                            <a href="/categories/%E7%A7%91%E7%A0%94/%E9%AB%98%E9%80%9A%E9%87%8F/" class="post-category">
+                                高通量
                             </a>
                         
                     </div>
@@ -675,7 +687,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-08-22
+                    2022-08-26
                 </div>
                 
 
@@ -689,14 +701,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    344
+                    483
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -724,66 +736,87 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Effective-Python"><a href="#Effective-Python" class="headerlink" title="Effective Python"></a>Effective Python</h1><blockquote>
-<p>书中的代码：<a target="_blank" rel="noopener" href="https://github.com/almazkun/effective_python">https://github.com/almazkun/effective_python</a></p>
-</blockquote>
-<h2 id="第1章-培养Pythonic思维"><a href="#第1章-培养Pythonic思维" class="headerlink" title="第1章 培养Pythonic思维"></a>第1章 培养Pythonic思维</h2><h3 id="第6条-把数据结构直接拆分到多个变量中，不要专门通过下标访问"><a href="#第6条-把数据结构直接拆分到多个变量中，不要专门通过下标访问" class="headerlink" title="第6条 把数据结构直接拆分到多个变量中，不要专门通过下标访问"></a>第6条 把数据结构直接拆分到多个变量中，不要专门通过下标访问</h3><p><strong>unpacking</strong></p>
-<ul>
-<li>拆分，特殊Python语法，可以把数据结构里面的多个值分别赋给相应的变量，只需一行代码</li>
-<li><strong>可以原地交换两个变量</strong></li>
-<li>凡可迭代对象均能拆分，无论里面还有多少层迭代结构</li>
-<li>尽量通过unpacking来拆解序列之中的数据，而不要通过下标访问</li>
-</ul>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 将元组中的元素分别赋给多个变量</span>
-item <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">"Peanut butter"</span><span class="token punctuation">,</span> <span class="token string">"Jelly"</span><span class="token punctuation">)</span>
-first<span class="token punctuation">,</span> second <span class="token operator">=</span> item <span class="token comment">#Unpacking</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>first<span class="token punctuation">}</span></span><span class="token string"> and </span><span class="token interpolation"><span class="token punctuation">{</span>second<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+                <h1 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h1><ol>
+<li>创建你所要计算体系的POSCAR文件，用脚本将POSCAR中的结构读入并产生计算弹性常数workflow；</li>
+<li>该workflow有26个fireworks，第1个是结构弛豫，第2-25是不同程度的变形（控制在弹性变形范围内（具体数值范围忘了，可看<code>wf_elastic_constant()</code>源代码），拉伸、压缩和剪切变形），第26个是分析弹性数据；</li>
+<li><code>qlaunch rapidfire</code>命令提交这26个fireworks；</li>
+<li>最后会在mongodb中新建一个elasticity的collection，里面有其拟合好的弹性常数，通过脚本获取。</li>
+</ol>
+<h1 id="产生计算弹性常数workflow脚本"><a href="#产生计算弹性常数workflow脚本" class="headerlink" title="产生计算弹性常数workflow脚本"></a>产生计算弹性常数workflow脚本</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> pymatgen<span class="token punctuation">.</span>core <span class="token keyword">import</span> Structure
+<span class="token keyword">from</span> fireworks <span class="token keyword">import</span> LaunchPad
+<span class="token keyword">from</span> atomate<span class="token punctuation">.</span>common<span class="token punctuation">.</span>powerups <span class="token keyword">import</span> add_namefile
+<span class="token keyword">from</span> atomate<span class="token punctuation">.</span>vasp<span class="token punctuation">.</span>powerups <span class="token keyword">import</span> add_modify_incar<span class="token punctuation">,</span> add_modify_kpoints
+<span class="token keyword">from</span> atomate<span class="token punctuation">.</span>vasp<span class="token punctuation">.</span>workflows <span class="token keyword">import</span> wf_elastic_constant
 
-<span class="token comment"># output</span>
-<span class="token triple-quoted-string string">"""
-Peanut butter and Jelly
-"""</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token comment"># 添加了add_namefile和修改了部分incar参数</span>
+struct <span class="token operator">=</span> Structure<span class="token punctuation">.</span>from_file<span class="token punctuation">(</span><span class="token string">'POSCAR'</span><span class="token punctuation">)</span>
 
+<span class="token comment"># 计算弹性常数用wf_elastic_constant()函数</span>
+workflow <span class="token operator">=</span> wf_elastic_constant<span class="token punctuation">(</span>struct<span class="token punctuation">)</span>
+workflow <span class="token operator">=</span>  add_namefile<span class="token punctuation">(</span>workflow<span class="token punctuation">)</span>
 
+<span class="token comment"># 修改INCAR中的部分参数，与MP中的参数尽量保持一致</span>
+workflow <span class="token operator">=</span> add_modify_incar<span class="token punctuation">(</span>workflow<span class="token punctuation">,</span> modify_incar_params<span class="token operator">=</span> 
+<span class="token punctuation">{</span><span class="token string">'incar_update'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token string">'ISMEAR'</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'ENCUT'</span><span class="token punctuation">:</span> <span class="token number">520</span><span class="token punctuation">,</span> <span class="token string">'EDIFF'</span><span class="token punctuation">:</span> <span class="token number">5e-5</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
 
+<span class="token comment"># 可以修改KPOINTS中的k点数目</span>
+<span class="token comment"># workflow = add_modify_kpoints(workflow, modify_kpoints_params= {'kpoints_update': {}}    )</span>
 
-
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 升序排序算法</span>
-<span class="token keyword">def</span> <span class="token function">bubble_sort</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">for</span> _ <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># 若无该循环语句，只会进行一轮循环，不一定使得完全升序</span>
-        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-            <span class="token keyword">if</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;</span> a<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
-                <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> a<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-                a<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> a<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token comment"># Swap 原地交换两个变量</span>
-
-    <span class="token keyword">return</span> a
-
-names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"pretzels"</span><span class="token punctuation">,</span> <span class="token string">"carrots"</span><span class="token punctuation">,</span> <span class="token string">"arugula"</span><span class="token punctuation">,</span> <span class="token string">"bacon"</span><span class="token punctuation">]</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>bubble_sort<span class="token punctuation">(</span>names<span class="token punctuation">)</span><span class="token punctuation">)</span>
-
-<span class="token comment"># output</span>
-<span class="token triple-quoted-string string">"""
-['pretzels', 'carrots', 'arugula', 'bacon'] carrots pretzels
-['carrots', 'pretzels', 'arugula', 'bacon'] arugula pretzels
-['carrots', 'arugula', 'pretzels', 'bacon'] bacon pretzels
-['carrots', 'arugula', 'bacon', 'pretzels'] arugula carrots
-['arugula', 'carrots', 'bacon', 'pretzels'] bacon carrots
-['arugula', 'bacon', 'carrots', 'pretzels']
-"""</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+launchpad <span class="token operator">=</span> LaunchPad<span class="token punctuation">.</span>auto_load<span class="token punctuation">(</span><span class="token punctuation">)</span>
+launchpad<span class="token punctuation">.</span>add_wf<span class="token punctuation">(</span>workflow<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 在for循环和enumerate()中使用unpacking</span>
-snacks <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token string">"bacon"</span><span class="token punctuation">,</span> <span class="token number">350</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">"donut"</span><span class="token punctuation">,</span> <span class="token number">240</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">"muffin"</span><span class="token punctuation">,</span> <span class="token number">190</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
-<span class="token keyword">for</span> rank<span class="token punctuation">,</span> <span class="token punctuation">(</span>name<span class="token punctuation">,</span> calories<span class="token punctuation">)</span> <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>snacks<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"#</span><span class="token interpolation"><span class="token punctuation">{</span>rank<span class="token punctuation">}</span></span><span class="token string">: </span><span class="token interpolation"><span class="token punctuation">{</span>name<span class="token punctuation">}</span></span><span class="token string"> has </span><span class="token interpolation"><span class="token punctuation">{</span>calories<span class="token punctuation">}</span></span><span class="token string"> calories"</span></span><span class="token punctuation">)</span>
 
-<span class="token comment"># output</span>
-<span class="token triple-quoted-string string">"""
-#1: bacon has 350 calories
-#2: donut has 240 calories
-#3: muffin has 190 calories
-"""</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="获取弹性常数数据脚本"><a href="#获取弹性常数数据脚本" class="headerlink" title="获取弹性常数数据脚本"></a>获取弹性常数数据脚本</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> atomate<span class="token punctuation">.</span>vasp<span class="token punctuation">.</span>database <span class="token keyword">import</span> VaspCalcDb
+<span class="token keyword">from</span> bson<span class="token punctuation">.</span>json_util <span class="token keyword">import</span> dumps
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> json
+
+<span class="token comment"># 连接db数据库</span>
+db_json_path <span class="token operator">=</span> <span class="token string">"your db.json file path"</span>
+atomate_db <span class="token operator">=</span> VaspCalcDb<span class="token punctuation">.</span>from_db_file<span class="token punctuation">(</span>db_json_path<span class="token punctuation">)</span>
+
+<span class="token comment"># 将mongodb中存储的数据转化成json文件保存到本地，以后读取就不需再连接db数据库</span>
+<span class="token keyword">def</span> <span class="token function">get_elastic_data_mongodb</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># 连接elasticity collection</span>
+    elastic_collection <span class="token operator">=</span> atomate_db<span class="token punctuation">.</span>db<span class="token punctuation">[</span><span class="token string">'elasticity'</span><span class="token punctuation">]</span>  <span class="token comment"># 连接elasticity collection</span>
+    <span class="token comment"># print(type(elastic_collection))</span>
+
+    elastic_entries <span class="token operator">=</span> elastic_collection<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># 只有一条ehtry，find()可以没有参数</span>
+    elastic_entries_list <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span>elastic_entries<span class="token punctuation">)</span>
+
+    <span class="token comment"># print(elastic_entries_list)</span>
+    elastic_json <span class="token operator">=</span> dumps<span class="token punctuation">(</span>elastic_entries_list<span class="token punctuation">,</span> indent<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'elastic-data.json'</span><span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token builtin">file</span><span class="token punctuation">:</span>
+        <span class="token builtin">file</span><span class="token punctuation">.</span>write<span class="token punctuation">(</span>elastic_json<span class="token punctuation">)</span>
+
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'elastic data convert to json. Done! '</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 读取json文件中的弹性常数数据</span>
+<span class="token keyword">def</span> <span class="token function">read_json_elastic_data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'elastic-data.json'</span><span class="token punctuation">,</span> <span class="token string">'r'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token builtin">file</span><span class="token punctuation">:</span>
+        content <span class="token operator">=</span> <span class="token builtin">file</span><span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    json_entries <span class="token operator">=</span> json<span class="token punctuation">.</span>loads<span class="token punctuation">(</span>content<span class="token punctuation">)</span>
+
+    elastic_tensor <span class="token operator">=</span> json_entries<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'elastic_tensor'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'raw'</span><span class="token punctuation">]</span> <span class="token comment"># raw或ieee_format形式</span>
+    <span class="token comment"># print(elastic_tensor)</span>
+
+    elastic_tensor_np <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span>elastic_tensor<span class="token punctuation">)</span>
+    elastic_tensor_np <span class="token operator">=</span> np<span class="token punctuation">.</span><span class="token builtin">round</span><span class="token punctuation">(</span>elastic_tensor_np<span class="token punctuation">)</span>
+    <span class="token comment"># print(elastic_tensor_np)</span>
+
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'elastic tensor C11 is: </span><span class="token interpolation"><span class="token punctuation">{</span>elastic_tensor_np<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string"> GPa'</span></span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'elastic tensor C12 is: </span><span class="token interpolation"><span class="token punctuation">{</span>elastic_tensor_np<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string"> GPa'</span></span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'elastic tensor C44 is: </span><span class="token interpolation"><span class="token punctuation">{</span>elastic_tensor_np<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string"> GPa'</span></span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>
+    <span class="token comment"># get_elastic_data_mongodb()</span>
+    read_json_elastic_data<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
                 
@@ -811,7 +844,7 @@ snacks <span class="token operator">=</span> <span class="token punctuation">[</
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://seekanotherland.xyz/posts/58088.html">http://seekanotherland.xyz/posts/58088.html</a>
+                    <a href="http://seekanotherland.xyz/posts/54196.html">http://seekanotherland.xyz/posts/54196.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -851,6 +884,14 @@ snacks <span class="token operator">=</span> <span class="token punctuation">[</
                             
                                 <a href="/tags/python/">
                                     <span class="chip bg-color">python</span>
+                                </a>
+                            
+                                <a href="/tags/Atomate/">
+                                    <span class="chip bg-color">Atomate</span>
+                                </a>
+                            
+                                <a href="/tags/mongodb/">
+                                    <span class="chip bg-color">mongodb</span>
                                 </a>
                             
                         </div>
@@ -1246,19 +1287,19 @@ snacks <span class="token operator">=</span> <span class="token punctuation">[</
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/54196.html">
+                <a href="/posts/10457.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://img.pterclub.com/images/2022/08/26/spider11.png" class="responsive-img" alt="用Atomate计算弹性常数">
+                        <img src="https://img.pterclub.com/images/2022/08/26/spider6.png" class="responsive-img" alt="shell学习教程">
                         
-                        <span class="card-title">用Atomate计算弹性常数</span>
+                        <span class="card-title">shell学习教程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            用Atomate计算弹性常数
+                            shell学习记录：字符串和流程控制
                         
                     </div>
                     <div class="publish-info">
@@ -1269,12 +1310,8 @@ snacks <span class="token operator">=</span> <span class="token punctuation">[</
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%A7%91%E7%A0%94/" class="post-category">
-                                    科研
-                                </a>
-                            
-                            <a href="/categories/%E7%A7%91%E7%A0%94/%E9%AB%98%E9%80%9A%E9%87%8F/" class="post-category">
-                                    高通量
+                            <a href="/categories/%E7%BC%96%E7%A8%8B/" class="post-category">
+                                    编程
                                 </a>
                             
                             
@@ -1284,16 +1321,8 @@ snacks <span class="token operator">=</span> <span class="token punctuation">[</
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/python/">
-                        <span class="chip bg-color">python</span>
-                    </a>
-                    
-                    <a href="/tags/Atomate/">
-                        <span class="chip bg-color">Atomate</span>
-                    </a>
-                    
-                    <a href="/tags/mongodb/">
-                        <span class="chip bg-color">mongodb</span>
+                    <a href="/tags/shell/">
+                        <span class="chip bg-color">shell</span>
                     </a>
                     
                 </div>
@@ -1307,31 +1336,31 @@ snacks <span class="token operator">=</span> <span class="token punctuation">[</
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/6838.html">
+                <a href="/posts/58088.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://img.pterclub.com/images/2022/08/26/spider2.jpg" class="responsive-img" alt="最优化--最优性条件">
+                        <img src="https://img.pterclub.com/images/2022/08/26/spider19.png" class="responsive-img" alt="把数据结构直接拆分到多个变量中，不要专门通过下标访问">
                         
-                        <span class="card-title">最优化--最优性条件</span>
+                        <span class="card-title">把数据结构直接拆分到多个变量中，不要专门通过下标访问</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            《最优化》笔记
+                            Effective Python第6条建议--unpacking（拆分）
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-22
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    学习
+                            <a href="/categories/%E7%BC%96%E7%A8%8B/" class="post-category">
+                                    编程
                                 </a>
                             
                             
@@ -1341,12 +1370,8 @@ snacks <span class="token operator">=</span> <span class="token punctuation">[</
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%9C%80%E4%BC%98%E5%8C%96/">
-                        <span class="chip bg-color">最优化</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%95%B0%E5%AD%A6/">
-                        <span class="chip bg-color">数学</span>
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
                     </a>
                     
                 </div>
