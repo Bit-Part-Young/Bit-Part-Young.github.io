@@ -88,11 +88,11 @@
   </entry>
   
   <entry>
-    <title>第一篇博客</title>
+    <title>Nobodyの第一篇博客</title>
     <link href="http://seekanotherland.xyz/posts/59448.html"/>
     <id>http://seekanotherland.xyz/posts/59448.html</id>
     <published>2022-07-30T08:04:58.000Z</published>
-    <updated>2022-08-26T04:10:50.304Z</updated>
+    <updated>2022-08-26T08:45:14.580Z</updated>
     
     
       
@@ -105,10 +105,10 @@
     
     
     
-    <category term="生活" scheme="http://seekanotherland.xyz/categories/%E7%94%9F%E6%B4%BB/"/>
+    <category term="hexo" scheme="http://seekanotherland.xyz/categories/hexo/"/>
     
     
-    <category term="blog" scheme="http://seekanotherland.xyz/tags/blog/"/>
+    <category term="博客" scheme="http://seekanotherland.xyz/tags/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
