@@ -6,7 +6,7 @@
   <link href="http://seekanotherland.xyz/atom.xml" rel="self"/>
   
   <link href="http://seekanotherland.xyz/"/>
-  <updated>2022-08-26T11:13:44.718Z</updated>
+  <updated>2022-08-28T17:58:18.354Z</updated>
   <id>http://seekanotherland.xyz/</id>
   
   <author>
@@ -17,11 +17,96 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>使用smms的api编写Python脚本实现自动上传图片并获取链接</title>
+    <link href="http://seekanotherland.xyz/posts/16240.html"/>
+    <id>http://seekanotherland.xyz/posts/16240.html</id>
+    <published>2022-08-28T17:17:06.000Z</published>
+    <updated>2022-08-28T17:58:18.354Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="图床" scheme="http://seekanotherland.xyz/categories/%E5%9B%BE%E5%BA%8A/"/>
+    
+    <category term="实用脚本" scheme="http://seekanotherland.xyz/categories/%E5%9B%BE%E5%BA%8A/%E5%AE%9E%E7%94%A8%E8%84%9A%E6%9C%AC/"/>
+    
+    
+    <category term="Python" scheme="http://seekanotherland.xyz/tags/Python/"/>
+    
+    <category term="smms" scheme="http://seekanotherland.xyz/tags/smms/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>给没有目录/书签的电子书pdf生成目录/书签</title>
+    <link href="http://seekanotherland.xyz/posts/19687.html"/>
+    <id>http://seekanotherland.xyz/posts/19687.html</id>
+    <published>2022-08-28T17:04:55.000Z</published>
+    <updated>2022-08-28T18:00:54.671Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="实用工具" scheme="http://seekanotherland.xyz/categories/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="电子书" scheme="http://seekanotherland.xyz/tags/%E7%94%B5%E5%AD%90%E4%B9%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用PicGo-Core/PicGo + github搭建免费图床并在Typora/VSCode写作中自动上传图片</title>
+    <link href="http://seekanotherland.xyz/posts/7877.html"/>
+    <id>http://seekanotherland.xyz/posts/7877.html</id>
+    <published>2022-08-28T16:08:57.000Z</published>
+    <updated>2022-08-28T17:58:36.008Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="图床" scheme="http://seekanotherland.xyz/categories/%E5%9B%BE%E5%BA%8A/"/>
+    
+    
+    <category term="VSCode" scheme="http://seekanotherland.xyz/tags/VSCode/"/>
+    
+    <category term="Typora" scheme="http://seekanotherland.xyz/tags/Typora/"/>
+    
+    <category term="github" scheme="http://seekanotherland.xyz/tags/github/"/>
+    
+    <category term="PicGo" scheme="http://seekanotherland.xyz/tags/PicGo/"/>
+    
+  </entry>
+  
+  <entry>
     <title>FFmpeg+Shell批量图片转gif</title>
     <link href="http://seekanotherland.xyz/posts/36354.html"/>
     <id>http://seekanotherland.xyz/posts/36354.html</id>
     <published>2022-08-26T11:05:43.000Z</published>
-    <updated>2022-08-26T11:13:44.718Z</updated>
+    <updated>2022-08-28T16:12:18.950Z</updated>
     
     
       
@@ -48,7 +133,7 @@
     <link href="http://seekanotherland.xyz/posts/18925.html"/>
     <id>http://seekanotherland.xyz/posts/18925.html</id>
     <published>2022-08-26T10:52:37.000Z</published>
-    <updated>2022-08-26T11:13:44.729Z</updated>
+    <updated>2022-08-28T17:16:37.665Z</updated>
     
     
       
@@ -66,16 +151,16 @@
     <category term="科研工具" scheme="http://seekanotherland.xyz/categories/%E7%BC%96%E7%A8%8B/%E7%A7%91%E7%A0%94%E5%B7%A5%E5%85%B7/"/>
     
     
-    <category term="vscode" scheme="http://seekanotherland.xyz/tags/vscode/"/>
+    <category term="VSCode" scheme="http://seekanotherland.xyz/tags/VSCode/"/>
     
   </entry>
   
   <entry>
-    <title>shell学习教程</title>
+    <title>Shell学习教程</title>
     <link href="http://seekanotherland.xyz/posts/10457.html"/>
     <id>http://seekanotherland.xyz/posts/10457.html</id>
     <published>2022-08-26T10:27:52.000Z</published>
-    <updated>2022-08-26T11:20:22.308Z</updated>
+    <updated>2022-08-28T16:15:04.553Z</updated>
     
     
       
@@ -91,7 +176,7 @@
     <category term="编程" scheme="http://seekanotherland.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
     
     
-    <category term="shell" scheme="http://seekanotherland.xyz/tags/shell/"/>
+    <category term="Shell" scheme="http://seekanotherland.xyz/tags/Shell/"/>
     
   </entry>
   
@@ -183,7 +268,7 @@
     <link href="http://seekanotherland.xyz/posts/59448.html"/>
     <id>http://seekanotherland.xyz/posts/59448.html</id>
     <published>2022-07-30T08:04:58.000Z</published>
-    <updated>2022-08-26T11:24:37.518Z</updated>
+    <updated>2022-08-28T17:47:07.810Z</updated>
     
     
       
