@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="用Atomate计算弹性常数, Seek Another Land">
-    <meta name="description" content="用Atomate计算弹性常数">
+    <meta name="keywords" content="交大常用网址汇总, Seek Another Land">
+    <meta name="description" content="交大常用网址汇总">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@
 
     
 
-    <title>用Atomate计算弹性常数 | Seek Another Land</title>
+    <title>交大常用网址汇总 | Seek Another Land</title>
     <link rel="icon" type="image/jpeg" href="https://img.pterclub.com/images/2022/08/25/favicon_rm.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -529,7 +529,7 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '';
+        let pwd = '984b04c6902141056353d1009c6774a458554ac1e735b0cb87e9f45a43fff078';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -542,12 +542,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://img.pterclub.com/images/2022/08/26/spider11.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://img.pterclub.com/images/2022/08/26/spider16.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">用Atomate计算弹性常数</h1>
+                    <h1 class="description center-align post-title">交大常用网址汇总</h1>
                 </div>
             </div>
         </div>
@@ -663,16 +663,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/python/">
-                                <span class="chip bg-color">python</span>
+                            <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F%E7%94%9F%E6%B4%BB/">
+                                <span class="chip bg-color">研究生生活</span>
                             </a>
                         
-                            <a href="/tags/Atomate/">
-                                <span class="chip bg-color">Atomate</span>
-                            </a>
-                        
-                            <a href="/tags/mongodb/">
-                                <span class="chip bg-color">mongodb</span>
+                            <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F%E5%AD%A6%E4%B9%A0/">
+                                <span class="chip bg-color">研究生学习</span>
                             </a>
                         
                     </div>
@@ -683,12 +679,12 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%A7%91%E7%A0%94/" class="post-category">
-                                科研
+                            <a href="/categories/%E7%94%9F%E6%B4%BB/" class="post-category">
+                                生活
                             </a>
                         
-                            <a href="/categories/%E7%A7%91%E7%A0%94/%E9%AB%98%E9%80%9A%E9%87%8F/" class="post-category">
-                                高通量
+                            <a href="/categories/%E7%94%9F%E6%B4%BB/%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                学习
                             </a>
                         
                     </div>
@@ -700,28 +696,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-08-26
+                    2022-09-12
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-08-26
+                    2022-09-12
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    483
+                    2.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    8 分
                 </div>
                 
 
@@ -749,88 +745,316 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h1><ol>
-<li>创建你所要计算体系的POSCAR文件，用脚本将POSCAR中的结构读入并产生计算弹性常数workflow；</li>
-<li>该workflow有26个fireworks，第1个是结构弛豫，第2-25是不同程度的变形（控制在弹性变形范围内（具体数值范围忘了，可看<code>wf_elastic_constant()</code>源代码），拉伸、压缩和剪切变形），第26个是分析弹性数据；</li>
-<li><code>qlaunch rapidfire</code>命令提交这26个fireworks；</li>
-<li>最后会在mongodb中新建一个elasticity的collection，里面有其拟合好的弹性常数，通过脚本获取。</li>
-</ol>
-<h1 id="产生计算弹性常数workflow脚本"><a href="#产生计算弹性常数workflow脚本" class="headerlink" title="产生计算弹性常数workflow脚本"></a>产生计算弹性常数workflow脚本</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> pymatgen<span class="token punctuation">.</span>core <span class="token keyword">import</span> Structure
-<span class="token keyword">from</span> fireworks <span class="token keyword">import</span> LaunchPad
-<span class="token keyword">from</span> atomate<span class="token punctuation">.</span>common<span class="token punctuation">.</span>powerups <span class="token keyword">import</span> add_namefile
-<span class="token keyword">from</span> atomate<span class="token punctuation">.</span>vasp<span class="token punctuation">.</span>powerups <span class="token keyword">import</span> add_modify_incar<span class="token punctuation">,</span> add_modify_kpoints
-<span class="token keyword">from</span> atomate<span class="token punctuation">.</span>vasp<span class="token punctuation">.</span>workflows <span class="token keyword">import</span> wf_elastic_constant
+                <h1 id="交大常用网址汇总"><a href="#交大常用网址汇总" class="headerlink" title="交大常用网址汇总"></a>交大常用网址汇总</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>整理了一下自己用到过（看到过）的校内网址，并按自己的使用频率进行了一定的排序，应该对新入学的交大研究生师弟师妹们有些用处。</p>
+<p>欢迎在博客或推送评论区处评论添加，一起补充~</p>
+<div class="uk-alert uk-alert-success"><i class="fa fa-check-circle"></i> 
+注：该内容在博客、推送、思源笔记上同步发布
+</div>
 
-<span class="token comment"># 添加了add_namefile和修改了部分incar参数</span>
-struct <span class="token operator">=</span> Structure<span class="token punctuation">.</span>from_file<span class="token punctuation">(</span><span class="token string">'POSCAR'</span><span class="token punctuation">)</span>
-
-<span class="token comment"># 计算弹性常数用wf_elastic_constant()函数</span>
-workflow <span class="token operator">=</span> wf_elastic_constant<span class="token punctuation">(</span>struct<span class="token punctuation">)</span>
-workflow <span class="token operator">=</span>  add_namefile<span class="token punctuation">(</span>workflow<span class="token punctuation">)</span>
-
-<span class="token comment"># 修改INCAR中的部分参数，与MP中的参数尽量保持一致</span>
-workflow <span class="token operator">=</span> add_modify_incar<span class="token punctuation">(</span>workflow<span class="token punctuation">,</span> modify_incar_params<span class="token operator">=</span> 
-<span class="token punctuation">{</span><span class="token string">'incar_update'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token string">'ISMEAR'</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'ENCUT'</span><span class="token punctuation">:</span> <span class="token number">520</span><span class="token punctuation">,</span> <span class="token string">'EDIFF'</span><span class="token punctuation">:</span> <span class="token number">5e-5</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
-
-<span class="token comment"># 可以修改KPOINTS中的k点数目</span>
-<span class="token comment"># workflow = add_modify_kpoints(workflow, modify_kpoints_params= {'kpoints_update': {}}    )</span>
-
-launchpad <span class="token operator">=</span> LaunchPad<span class="token punctuation">.</span>auto_load<span class="token punctuation">(</span><span class="token punctuation">)</span>
-launchpad<span class="token punctuation">.</span>add_wf<span class="token punctuation">(</span>workflow<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-
-
-<h1 id="获取弹性常数数据脚本"><a href="#获取弹性常数数据脚本" class="headerlink" title="获取弹性常数数据脚本"></a>获取弹性常数数据脚本</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> atomate<span class="token punctuation">.</span>vasp<span class="token punctuation">.</span>database <span class="token keyword">import</span> VaspCalcDb
-<span class="token keyword">from</span> bson<span class="token punctuation">.</span>json_util <span class="token keyword">import</span> dumps
-<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
-<span class="token keyword">import</span> json
-
-<span class="token comment"># 连接db数据库</span>
-db_json_path <span class="token operator">=</span> <span class="token string">"your db.json file path"</span>
-atomate_db <span class="token operator">=</span> VaspCalcDb<span class="token punctuation">.</span>from_db_file<span class="token punctuation">(</span>db_json_path<span class="token punctuation">)</span>
-
-<span class="token comment"># 将mongodb中存储的数据转化成json文件保存到本地，以后读取就不需再连接db数据库</span>
-<span class="token keyword">def</span> <span class="token function">get_elastic_data_mongodb</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token comment"># 连接elasticity collection</span>
-    elastic_collection <span class="token operator">=</span> atomate_db<span class="token punctuation">.</span>db<span class="token punctuation">[</span><span class="token string">'elasticity'</span><span class="token punctuation">]</span>  <span class="token comment"># 连接elasticity collection</span>
-    <span class="token comment"># print(type(elastic_collection))</span>
-
-    elastic_entries <span class="token operator">=</span> elastic_collection<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># 只有一条ehtry，find()可以没有参数</span>
-    elastic_entries_list <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span>elastic_entries<span class="token punctuation">)</span>
-
-    <span class="token comment"># print(elastic_entries_list)</span>
-    elastic_json <span class="token operator">=</span> dumps<span class="token punctuation">(</span>elastic_entries_list<span class="token punctuation">,</span> indent<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">)</span>
-
-    <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'elastic-data.json'</span><span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token builtin">file</span><span class="token punctuation">:</span>
-        <span class="token builtin">file</span><span class="token punctuation">.</span>write<span class="token punctuation">(</span>elastic_json<span class="token punctuation">)</span>
-
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'elastic data convert to json. Done! '</span><span class="token punctuation">)</span>
-
-<span class="token comment"># 读取json文件中的弹性常数数据</span>
-<span class="token keyword">def</span> <span class="token function">read_json_elastic_data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'elastic-data.json'</span><span class="token punctuation">,</span> <span class="token string">'r'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token builtin">file</span><span class="token punctuation">:</span>
-        content <span class="token operator">=</span> <span class="token builtin">file</span><span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
-
-    json_entries <span class="token operator">=</span> json<span class="token punctuation">.</span>loads<span class="token punctuation">(</span>content<span class="token punctuation">)</span>
-
-    elastic_tensor <span class="token operator">=</span> json_entries<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'elastic_tensor'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'raw'</span><span class="token punctuation">]</span> <span class="token comment"># raw或ieee_format形式</span>
-    <span class="token comment"># print(elastic_tensor)</span>
-
-    elastic_tensor_np <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span>elastic_tensor<span class="token punctuation">)</span>
-    elastic_tensor_np <span class="token operator">=</span> np<span class="token punctuation">.</span><span class="token builtin">round</span><span class="token punctuation">(</span>elastic_tensor_np<span class="token punctuation">)</span>
-    <span class="token comment"># print(elastic_tensor_np)</span>
-
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'elastic tensor C11 is: </span><span class="token interpolation"><span class="token punctuation">{</span>elastic_tensor_np<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string"> GPa'</span></span><span class="token punctuation">)</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'elastic tensor C12 is: </span><span class="token interpolation"><span class="token punctuation">{</span>elastic_tensor_np<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string"> GPa'</span></span><span class="token punctuation">)</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'elastic tensor C44 is: </span><span class="token interpolation"><span class="token punctuation">{</span>elastic_tensor_np<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string"> GPa'</span></span><span class="token punctuation">)</span>
-
-
-<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>
-    <span class="token comment"># get_elastic_data_mongodb()</span>
-    read_json_elastic_data<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+<blockquote>
+<p>思源笔记地址：<a target="_blank" rel="noopener" href="https://notes.sjtu.edu.cn/s/QmcG0W06p">https://notes.sjtu.edu.cn/s/QmcG0W06p</a></p>
+</blockquote>
+<blockquote>
+<p>整理：By 小小角色、海心</p>
+<p>整理时间：2021.11.29，不定期更新维护</p>
+</blockquote>
+<hr>
+<h2 id="生活类"><a href="#生活类" class="headerlink" title="生活类"></a>生活类</h2><h3 id="jaccount登录验证码自动识别油猴插件"><a href="#jaccount登录验证码自动识别油猴插件" class="headerlink" title="jaccount登录验证码自动识别油猴插件"></a>jaccount登录验证码自动识别油猴插件</h3><ul>
+<li>学校的很多网站都需jaccount登录，输验证码；该插件可解决输验证码的烦恼，自动识别；需提前安装油猴（tampermonkey）<blockquote>
+<p><a target="_blank" rel="noopener" href="https://greasyfork.org/zh-CN/scripts/432645">https://greasyfork.org/zh-CN/scripts/432645</a></p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h3 id="我的数字交大"><a href="#我的数字交大" class="headerlink" title="我的数字交大"></a>我的数字交大</h3><ul>
+<li>各种服务事项大多都可以在里面完成，集成度很高，有网页版也有app</li>
+<li>交大V卡、多码合一、出入校申请、体育馆预约、图书馆预约、电子地图、个人收入等，自己探索<blockquote>
+<p><a target="_blank" rel="noopener" href="https://my.sjtu.edu.cn/">https://my.sjtu.edu.cn/</a></p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h3 id="交大柠檬"><a href="#交大柠檬" class="headerlink" title="交大柠檬"></a>交大柠檬</h3><ul>
+<li>非PC网页，微信小程序，交大学生闲置物品交易平台（类似二手交易群）；也可以发个人生活动态（思源湖底）</li>
+<li>微信搜索“交大柠檬”即可</li>
+<li>另一个校内买二手书的微信小程序：知十</li>
+<li>校内买二手书的线下门店：朝花夕拾（南洋南路，棒球场、涵洞附近）</li>
+</ul>
+<hr>
+<h3 id="交大生存手册"><a href="#交大生存手册" class="headerlink" title="交大生存手册"></a>交大生存手册</h3><ul>
+<li>新入学的交大本科生看比较适用，研究生也可以看看</li>
+</ul>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://survivesjtu.gitbook.io/survivesjtumanual/">https://survivesjtu.gitbook.io/survivesjtumanual/</a></p>
+</blockquote>
+<hr>
+<h3 id="水源社区"><a href="#水源社区" class="headerlink" title="水源社区"></a>水源社区</h3><ul>
+<li>交大人的社区论坛，有一些还不错的帖子（个人常逛）</li>
+</ul>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://shuiyuan.sjtu.edu.cn/">https://shuiyuan.sjtu.edu.cn/</a></p>
+</blockquote>
+<hr>
+<h3 id="交大财务计划处"><a href="#交大财务计划处" class="headerlink" title="交大财务计划处"></a>交大财务计划处</h3><ul>
+<li>查询自己的工资明细，比“交我办”的详细一些</li>
+</ul>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.jdcw.sjtu.edu.cn/">https://www.jdcw.sjtu.edu.cn/</a></p>
+</blockquote>
+<hr>
+<h3 id="交大学生事务中心"><a href="#交大学生事务中心" class="headerlink" title="交大学生事务中心"></a>交大学生事务中心</h3><ul>
+<li>奖助学金发放公告的地方</li>
+<li>可查看勤工助学、助教工资情况   #22.04.05添加</li>
+</ul>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://affairs.sjtu.edu.cn/">https://affairs.sjtu.edu.cn/</a></p>
+</blockquote>
+<hr>
+<h3 id="葡萄-校园PT"><a href="#葡萄-校园PT" class="headerlink" title="葡萄 - 校园PT"></a>葡萄 - 校园PT</h3><ul>
+<li>热门影视资源下载，不过不是太活跃，资源做种情况不是很好，热门资源还行</li>
+<li>IPV4和IPV6均可登录，即校内校外均可登录</li>
+<li>建议注册北洋园PT（天津大学PT站），该PT站较活跃，用学校邮箱注册即可</li>
+</ul>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://pt.sjtu.edu.cn/">https://pt.sjtu.edu.cn/</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.tjupt.org/">https://www.tjupt.org/</a>  #北洋园PT</p>
+</blockquote>
+<hr>
+<h3 id="交大云盘"><a href="#交大云盘" class="headerlink" title="交大云盘"></a>交大云盘</h3><ul>
+<li>网页打开，可以找到PC端和手机端软件下载口</li>
+<li>1T空间，上传/下载速度快，可达15MB/s，只能校内使用；校外使用需打开交大VPN（有专门的软件）</li>
+<li>可以使用同步功能，将常用的某个文件夹同步到云盘中，以防丢失，同步到多台电脑</li>
+</ul>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://jbox.sjtu.edu.cn/">https://jbox.sjtu.edu.cn/</a></p>
+</blockquote>
+<hr>
+<h3 id="交大第二课堂"><a href="#交大第二课堂" class="headerlink" title="交大第二课堂"></a>交大第二课堂</h3><ul>
+<li>部分活动报名的地方，如献血报名，志愿活动报名等，名额需抢，挺激烈的</li>
+</ul>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://dekt.sjtu.edu.cn/h5/index">https://dekt.sjtu.edu.cn/h5/index</a></p>
+</blockquote>
+<hr>
+<h3 id="上海交通大学网络信息中心"><a href="#上海交通大学网络信息中心" class="headerlink" title="上海交通大学网络信息中心"></a>上海交通大学网络信息中心</h3><ul>
+<li>校园网、交大云盘、正版软件、jCloud云服务、IPV6、邮箱、高性能计算服务；集成度较高</li>
+</ul>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://net.sjtu.edu.cn/">https://net.sjtu.edu.cn/</a></p>
+</blockquote>
+<hr>
+<h3 id="软件授权中心"><a href="#软件授权中心" class="headerlink" title="软件授权中心"></a>软件授权中心</h3><ul>
+<li>一些工程软件（Endnote、matlab、solidworks、origin等）</li>
+</ul>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://lic.sjtu.edu.cn/">https://lic.sjtu.edu.cn/</a>  #21.12.24添加</p>
+</blockquote>
+<hr>
+<h3 id="交大邮箱"><a href="#交大邮箱" class="headerlink" title="交大邮箱"></a>交大邮箱</h3><blockquote>
+<p><a target="_blank" rel="noopener" href="https://mail.sjtu.edu.cn/">https://mail.sjtu.edu.cn/</a></p>
+</blockquote>
+<hr>
+<h3 id="交大学生网络信息管理部"><a href="#交大学生网络信息管理部" class="headerlink" title="交大学生网络信息管理部"></a>交大学生网络信息管理部</h3><ul>
+<li>含有宿舍安装连接网络教程</li>
+</ul>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://nimo.sjtu.edu.cn/kaleid/oscope/home/">https://nimo.sjtu.edu.cn/kaleid/oscope/home/</a></p>
+</blockquote>
+<hr>
+<h3 id="交大网络测速"><a href="#交大网络测速" class="headerlink" title="交大网络测速"></a>交大网络测速</h3><ul>
+<li>可以测校园网和寝室里的网络速度和延迟情况</li>
+</ul>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://speedtest.sjtu.edu.cn/librespeed/">https://speedtest.sjtu.edu.cn/librespeed/</a></p>
+</blockquote>
+<hr>
+<h3 id="交大电子地图"><a href="#交大电子地图" class="headerlink" title="交大电子地图"></a>交大电子地图</h3><blockquote>
+<p><a target="_blank" rel="noopener" href="https://map.sjtu.edu.cn/">https://map.sjtu.edu.cn/</a></p>
+</blockquote>
+<hr>
+<h3 id="上海交通大学视觉形象识别系统"><a href="#上海交通大学视觉形象识别系统" class="headerlink" title="上海交通大学视觉形象识别系统"></a>上海交通大学视觉形象识别系统</h3><ul>
+<li>校标下载</li>
+<li>部分PPT模板</li>
+<li>校标放置规范</li>
+</ul>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://vi.sjtu.edu.cn/index.php/articles/bulletin/13">https://vi.sjtu.edu.cn/index.php/articles/bulletin/13</a></p>
+</blockquote>
+<hr>
+<h3 id="交大Minecraft社团"><a href="#交大Minecraft社团" class="headerlink" title="交大Minecraft社团"></a>交大Minecraft社团</h3><ul>
+<li>交大Minecraft社团，有部分地图，蛮有意思的</li>
+</ul>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://mc.sjtu.cn/">https://mc.sjtu.cn/</a></p>
+</blockquote>
+<hr>
+<h3 id="交大校医院"><a href="#交大校医院" class="headerlink" title="交大校医院"></a>交大校医院</h3><ul>
+<li>希望大家用不到</li>
+</ul>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://hospital.sjtu.edu.cn/#/">https://hospital.sjtu.edu.cn/#/</a></p>
+</blockquote>
+<hr>
+<h2 id="学习类"><a href="#学习类" class="headerlink" title="学习类"></a>学习类</h2><h3 id="研究生应用管理平台"><a href="#研究生应用管理平台" class="headerlink" title="研究生应用管理平台"></a>研究生应用管理平台</h3><ul>
+<li>研究生培养方案/计划、选课、成绩、考试查询平台  21.12.25添加</li>
+<li>具体成绩查询：我的学籍–已完成培养计划</li>
+</ul>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://yjs.sjtu.edu.cn/">http://yjs.sjtu.edu.cn/</a></p>
+</blockquote>
+<hr>
+<h3 id="上海交通大学在线教学平台Canvas"><a href="#上海交通大学在线教学平台Canvas" class="headerlink" title="上海交通大学在线教学平台Canvas"></a>上海交通大学在线教学平台Canvas</h3><ul>
+<li>自己所选课程的课程老师会在上面发布课程相关教学资料，有教学录像回放</li>
+</ul>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://oc.sjtu.edu.cn/">https://oc.sjtu.edu.cn/</a></p>
+<p><a target="_blank" rel="noopener" href="https://umjicanvas.com/courses">https://umjicanvas.com/courses</a>  #密院canvas网址</p>
+<p><a target="_blank" rel="noopener" href="https://surviveumji.github.io/SurviveUMJIManual/">https://surviveumji.github.io/SurviveUMJIManual/</a>  #交大密西根学院生存指南 22.06.30添加</p>
+</blockquote>
+<ul>
+<li>有辅助的教学资料下载程序</li>
+</ul>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/skyzh/canvas_grab">https://github.com/skyzh/canvas_grab</a></p>
+</blockquote>
+<ul>
+<li>有教学录像倍速播放油猴插件</li>
+</ul>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://greasyfork.org/zh-CN/scripts/432918">https://greasyfork.org/zh-CN/scripts/432918</a></p>
+<ul>
+<li>最新的插件版本可以退出画中画，可将录屏大小调整至和录像视频一样大小，可随意拖动位置</li>
+<li>倍速播放选择更多 21.12.01添加</li>
+</ul>
+</blockquote>
+<ul>
+<li>有辅助的教学录像下载程序</li>
+</ul>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/prcwcy/sjtu-canvas-video-download">https://github.com/prcwcy/sjtu-canvas-video-download</a></p>
+</blockquote>
+<hr>
+<h3 id="交大图书馆"><a href="#交大图书馆" class="headerlink" title="交大图书馆"></a>交大图书馆</h3><ul>
+<li>找书、文献数据库</li>
+<li>有一些以往图书馆开展的讲座培训课件和视频，对更好地使用图书馆资源有一定的帮助</li>
+</ul>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.lib.sjtu.edu.cn/">https://www.lib.sjtu.edu.cn/</a></p>
+</blockquote>
+<hr>
+<h3 id="材料学院"><a href="#材料学院" class="headerlink" title="材料学院"></a>材料学院</h3><blockquote>
+<p><a target="_blank" rel="noopener" href="https://smse.sjtu.edu.cn/ggao-list.asp">https://smse.sjtu.edu.cn/ggao-list.asp</a> #通知公告  #22.03.26添加<br><a target="_blank" rel="noopener" href="https://smse.sjtu.edu.cn/jiaogongminglu.asp">https://smse.sjtu.edu.cn/jiaogongminglu.asp</a> #教工名录<br><a target="_blank" rel="noopener" href="https://smse.sjtu.edu.cn/yanjiushengpeiyang-content.asp?id=496">https://smse.sjtu.edu.cn/yanjiushengpeiyang-content.asp?id=496</a> #研究生课程体系及教学大纲；可查看相关专业课程的教学大纲、考核方式等，以便选课</p>
+</blockquote>
+<hr>
+<h3 id="谷歌、谷歌学术"><a href="#谷歌、谷歌学术" class="headerlink" title="谷歌、谷歌学术"></a>谷歌、谷歌学术</h3><ul>
+<li>PC端连接校园网可直接登录谷歌、谷歌学术</li>
+<li>手机端连接校园网可直接登录谷歌学术，无法登录谷歌</li>
+<li>21.11.29 19:30添加</li>
+</ul>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.google.com/">https://www.google.com</a> #谷歌<br><a target="_blank" rel="noopener" href="https://scholar.google.com/">https://scholar.google.com/</a> #谷歌学术</p>
+</blockquote>
+<hr>
+<h3 id="水源文档-协作笔记"><a href="#水源文档-协作笔记" class="headerlink" title="水源文档 - 协作笔记"></a>水源文档 - 协作笔记</h3><ul>
+<li>交大版在线markdown，可在线做笔记，也可协作编辑文档，类似“石墨文档”</li>
+</ul>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://notes.sjtu.edu.cn/">https://notes.sjtu.edu.cn/</a></p>
+</blockquote>
+<hr>
+<h3 id="高性能计算中心"><a href="#高性能计算中心" class="headerlink" title="高性能计算中心"></a>高性能计算中心</h3><ul>
+<li>学校超算平台，包括arm、$\pi$2.0和思源一号（个人常用）</li>
+</ul>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://hpc.sjtu.edu.cn/">https://hpc.sjtu.edu.cn/</a>    #21.12.25添加<br><a target="_blank" rel="noopener" href="https://status.hpc.sjtu.edu.cn/">https://status.hpc.sjtu.edu.cn/</a> #$\pi 2.0$集群状态查询<br><a target="_blank" rel="noopener" href="https://docs.hpc.sjtu.edu.cn/">https://docs.hpc.sjtu.edu.cn/</a>  #上海交大超算平台用户文档  #22.04.02添加<br><a target="_blank" rel="noopener" href="https://docs.hpc.sjtu.edu.cn/app/index.html">https://docs.hpc.sjtu.edu.cn/app/index.html</a> #$\pi 2.0$集群软件模块<br><a target="_blank" rel="noopener" href="https://docs.hpc.sjtu.edu.cn/app/engineeringscience/vasp.html">https://docs.hpc.sjtu.edu.cn/app/engineeringscience/vasp.html</a>  #$\pi 2.0$集群VASP软件<br><a target="_blank" rel="noopener" href="https://docs.hpc.sjtu.edu.cn/app/engineeringscience/lammps.html">https://docs.hpc.sjtu.edu.cn/app/engineeringscience/lammps.html</a>  #$\pi 2.0$集群LAMMPS软件<br><a target="_blank" rel="noopener" href="https://docs.hpc.sjtu.edu.cn/job/slurm.html">https://docs.hpc.sjtu.edu.cn/job/slurm.html</a>  #Slurm 作业调度系统</p>
+</blockquote>
+<hr>
+<h3 id="交大机构知识管理服务系统"><a href="#交大机构知识管理服务系统" class="headerlink" title="交大机构知识管理服务系统"></a>交大机构知识管理服务系统</h3><ul>
+<li>将署名单位为交大的论文全部收入到该系统中</li>
+<li>可以更方便、更精准地查阅导师和师兄师姐的论文发布情况（部分最新的论文更新会有些不及时）  21.12.06 添加</li>
+</ul>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://www.ir.lib.sjtu.edu.cn/">http://www.ir.lib.sjtu.edu.cn/</a></p>
+</blockquote>
+<hr>
+<h3 id="开源软件镜像站"><a href="#开源软件镜像站" class="headerlink" title="开源软件镜像站"></a>开源软件镜像站</h3><ul>
+<li>开源软件下载；conda换源</li>
+</ul>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/">https://mirrors.tuna.tsinghua.edu.cn/</a> #清华镜像；很全<br><a target="_blank" rel="noopener" href="https://mirrors.sjtug.sjtu.edu.cn/">https://mirrors.sjtug.sjtu.edu.cn/</a> #交大镜像；没有清华全；可互补  22.03.26添加</p>
+</blockquote>
+<hr>
+<h3 id="传承·交大"><a href="#传承·交大" class="headerlink" title="传承·交大"></a>传承·交大</h3><ul>
+<li>课程复习资料及往年试题下载，不过不是很多</li>
+<li>本科生课程资料相对多一些，研究生课程资料很少</li>
+<li>咱们可以上传一些自己课程的相关资料，丰富资料内容<blockquote>
+<p><a target="_blank" rel="noopener" href="https://share.dyweb.sjtu.cn/">https://share.dyweb.sjtu.cn/</a></p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h3 id="教材电子书"><a href="#教材电子书" class="headerlink" title="教材电子书"></a>教材电子书</h3><ul>
+<li>部分老的和新的教材电子书供平时参考学习；每次可以打印5页，可以打印部分对自己有用的章节<blockquote>
+<p><a target="_blank" rel="noopener" href="http://jcft.lib.sjtu.edu.cn:9088/">http://jcft.lib.sjtu.edu.cn:9088/</a></p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h3 id="交大学位论文系统"><a href="#交大学位论文系统" class="headerlink" title="交大学位论文系统"></a>交大学位论文系统</h3><ul>
+<li>可查询感兴趣的交大学位论文及导师带过的师兄师姐的毕业学位论文<blockquote>
+<p><a target="_blank" rel="noopener" href="http://thesis.lib.sjtu.edu.cn/">http://thesis.lib.sjtu.edu.cn/</a></p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h3 id="交大教学信息楼发布系统"><a href="#交大教学信息楼发布系统" class="headerlink" title="交大教学信息楼发布系统"></a>交大教学信息楼发布系统</h3><ul>
+<li>可查询教学楼教室使用情况、要上的课及感兴趣或想蹭的课的课程信息<blockquote>
+<p><a target="_blank" rel="noopener" href="https://ids.sjtu.edu.cn/">https://ids.sjtu.edu.cn/</a></p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h3 id="交大在线LaTeX编辑器"><a href="#交大在线LaTeX编辑器" class="headerlink" title="交大在线LaTeX编辑器"></a>交大在线LaTeX编辑器</h3><ul>
+<li>交大版overleaf，在线latex编辑器，可做笔记、撰写论文<blockquote>
+<p><a target="_blank" rel="noopener" href="https://latex.sjtu.edu.cn/">https://latex.sjtu.edu.cn/</a></p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h3 id="交大Beamer模板"><a href="#交大Beamer模板" class="headerlink" title="交大Beamer模板"></a>交大Beamer模板</h3><ul>
+<li>用latex写的Beamer（PPT）模板<blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/sjtug/SJTUBeamer">https://github.com/sjtug/SJTUBeamer</a></p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h3 id="交大论文模板"><a href="#交大论文模板" class="headerlink" title="交大论文模板"></a>交大论文模板</h3><ul>
+<li>用latex写的论文模板<blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/sjtug/SJTUThesis">https://github.com/sjtug/SJTUThesis</a></p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h3 id="SJTU选课社区"><a href="#SJTU选课社区" class="headerlink" title="SJTU选课社区"></a>SJTU选课社区</h3><ul>
+<li>交大所有本科生课程的课程点评，选课参考；咱研究生可以根据这个去蹭有用的课<blockquote>
+<p><a target="_blank" rel="noopener" href="https://course.sjtu.plus/">https://course.sjtu.plus/</a></p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h3 id="交大学期开课和虚拟课表"><a href="#交大学期开课和虚拟课表" class="headerlink" title="交大学期开课和虚拟课表"></a>交大学期开课和虚拟课表</h3><ul>
+<li>本科生学期开课和虚拟课表和常用网址导航<blockquote>
+<p><a target="_blank" rel="noopener" href="https://plus.sjtu.edu.cn/">https://plus.sjtu.edu.cn/</a></p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h3 id="上海交通大学开发者平台"><a href="#上海交通大学开发者平台" class="headerlink" title="上海交通大学开发者平台"></a>上海交通大学开发者平台</h3><ul>
+<li>有开放API，可以获取部分网页的数据资源（应该是，还不太会用）</li>
+</ul>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://developer.sjtu.edu.cn/">https://developer.sjtu.edu.cn/</a>  #22.09.12添加</p>
+</blockquote>
 <link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
                 
             </div>
@@ -857,7 +1081,7 @@ atomate_db <span class="token operator">=</span> VaspCalcDb<span class="token pu
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://seekanotherland.xyz/posts/54196.html">http://seekanotherland.xyz/posts/54196.html</a>
+                    <a href="http://seekanotherland.xyz/posts/64567.html">http://seekanotherland.xyz/posts/64567.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -895,16 +1119,12 @@ atomate_db <span class="token operator">=</span> VaspCalcDb<span class="token pu
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/python/">
-                                    <span class="chip bg-color">python</span>
+                                <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F%E7%94%9F%E6%B4%BB/">
+                                    <span class="chip bg-color">研究生生活</span>
                                 </a>
                             
-                                <a href="/tags/Atomate/">
-                                    <span class="chip bg-color">Atomate</span>
-                                </a>
-                            
-                                <a href="/tags/mongodb/">
-                                    <span class="chip bg-color">mongodb</span>
+                                <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F%E5%AD%A6%E4%B9%A0/">
+                                    <span class="chip bg-color">研究生学习</span>
                                 </a>
                             
                         </div>
@@ -1296,46 +1516,56 @@ atomate_db <span class="token operator">=</span> VaspCalcDb<span class="token pu
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/10457.html">
+                <a href="/posts/64567.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://img.pterclub.com/images/2022/08/26/spider18.png" class="responsive-img" alt="Shell学习教程">
+                        <img src="https://img.pterclub.com/images/2022/08/26/spider16.png" class="responsive-img" alt="交大常用网址汇总">
                         
-                        <span class="card-title">Shell学习教程</span>
+                        <span class="card-title">交大常用网址汇总</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Shell学习记录：字符串和流程控制
+                            交大常用网址汇总
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-08-26
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-12
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%BC%96%E7%A8%8B/" class="post-category">
-                                    编程
+                            <a href="/categories/%E7%94%9F%E6%B4%BB/" class="post-category">
+                                    生活
+                                </a>
+                            
+                            <a href="/categories/%E7%94%9F%E6%B4%BB/%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    学习
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Shell/">
-                        <span class="chip bg-color">Shell</span>
+                    <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F%E7%94%9F%E6%B4%BB/">
+                        <span class="chip bg-color">研究生生活</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">研究生学习</span>
                     </a>
                     
                 </div>
@@ -1349,31 +1579,31 @@ atomate_db <span class="token operator">=</span> VaspCalcDb<span class="token pu
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/58088.html">
+                <a href="/posts/11143.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://img.pterclub.com/images/2022/08/26/spider19.png" class="responsive-img" alt="把数据结构直接拆分到多个变量中，不要专门通过下标访问">
+                        <img src="https://img.pterclub.com/images/2022/08/26/spider19.png" class="responsive-img" alt="交大材料学院研究生课程选课指北">
                         
-                        <span class="card-title">把数据结构直接拆分到多个变量中，不要专门通过下标访问</span>
+                        <span class="card-title">交大材料学院研究生课程选课指北</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Effective Python第6条建议--unpacking（拆分）
+                            交大材料学院研究生课程选课指北
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-12
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%BC%96%E7%A8%8B/" class="post-category">
-                                    编程
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    学习
                                 </a>
                             
                             
@@ -1383,8 +1613,8 @@ atomate_db <span class="token operator">=</span> VaspCalcDb<span class="token pu
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/python/">
-                        <span class="chip bg-color">python</span>
+                    <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F%E8%AF%BE%E7%A8%8B/">
+                        <span class="chip bg-color">研究生课程</span>
                     </a>
                     
                 </div>
