@@ -526,6 +526,19 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -1578,7 +1591,7 @@ snacks <span class="token operator">=</span> <span class="token punctuation">[</
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">4.4k</span>
+                        class="white-color">8.2k</span>
             
             
             
@@ -1723,7 +1736,7 @@ snacks <span class="token operator">=</span> <span class="token punctuation">[</
             <span class="badge-subject">PV</span><span class="badge-value bg-brightgreen" id="busuanzi_value_site_pv"></span>
           </div>
           <div class="github-badge">
-            <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">4.4k</span>
+            <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">8.2k</span>
           </div>
 	</div> -->
 	

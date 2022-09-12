@@ -526,6 +526,19 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -1297,56 +1310,46 @@ flag <span class="token operator">=</span> <span class="token number">1</span>  
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/16240.html">
+                <a href="/posts/11143.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://img.pterclub.com/images/2022/08/26/spider9.png" class="responsive-img" alt="使用smms的api编写Python脚本实现自动上传图片并获取链接">
+                        <img src="https://img.pterclub.com/images/2022/08/26/spider19.png" class="responsive-img" alt="交大材料学院研究生课程选课指北">
                         
-                        <span class="card-title">使用smms的api编写Python脚本实现自动上传图片并获取链接</span>
+                        <span class="card-title">交大材料学院研究生课程选课指北</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            偷懒小妙招
+                            交大材料学院研究生课程选课指北
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-29
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-09-12
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%9B%BE%E5%BA%8A/" class="post-category">
-                                    图床
-                                </a>
-                            
-                            <a href="/categories/%E5%9B%BE%E5%BA%8A/%E5%AE%9E%E7%94%A8%E8%84%9A%E6%9C%AC/" class="post-category">
-                                    实用脚本
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    学习
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Python/">
-                        <span class="chip bg-color">Python</span>
-                    </a>
-                    
-                    <a href="/tags/smms/">
-                        <span class="chip bg-color">smms</span>
+                    <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F%E8%AF%BE%E7%A8%8B/">
+                        <span class="chip bg-color">研究生课程</span>
                     </a>
                     
                 </div>
@@ -1627,7 +1630,7 @@ flag <span class="token operator">=</span> <span class="token number">1</span>  
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">4.4k</span>
+                        class="white-color">8.2k</span>
             
             
             
@@ -1772,7 +1775,7 @@ flag <span class="token operator">=</span> <span class="token number">1</span>  
             <span class="badge-subject">PV</span><span class="badge-value bg-brightgreen" id="busuanzi_value_site_pv"></span>
           </div>
           <div class="github-badge">
-            <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">4.4k</span>
+            <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet">8.2k</span>
           </div>
 	</div> -->
 	
