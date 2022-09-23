@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="musics, Seek Another Land">
-    <meta name="description" content="卸下所有的伪装">
+    <meta name="keywords" content="matplotlib相关函数, Seek Another Land">
+    <meta name="description" content="matplotlib相关函数使用记录">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@
 
     
 
-    <title>musics | Seek Another Land</title>
+    <title>matplotlib相关函数 | Seek Another Land</title>
     <link rel="icon" type="image/jpeg" href="https://img.pterclub.com/images/2022/08/25/favicon_rm.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -547,7 +547,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">musics</h1>
+                    <h1 class="description center-align post-title">matplotlib相关函数</h1>
                 </div>
             </div>
         </div>
@@ -675,21 +675,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-08-13
+                    2022-09-23
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-08-17
+                    2022-09-23
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    89
                 </div>
                 
 
@@ -724,7 +724,41 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+                <h1 id="matplotlib相关函数"><a href="#matplotlib相关函数" class="headerlink" title="matplotlib相关函数"></a>matplotlib相关函数</h1><h2 id="引入matplotlib包"><a href="#引入matplotlib包" class="headerlink" title="引入matplotlib包"></a>引入matplotlib包</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+<h2 id="坐标轴标签"><a href="#坐标轴标签" class="headerlink" title="坐标轴标签"></a>坐标轴标签</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># x轴 </span>
+plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># y轴 </span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="坐标轴范围"><a href="#坐标轴范围" class="headerlink" title="坐标轴范围"></a>坐标轴范围</h2><pre class="line-numbers language-none"><code class="language-none">plt.xlim()
+plt.ylim()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="图例"><a href="#图例" class="headerlink" title="图例"></a>图例</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">plt<span class="token punctuation">.</span>legend<span class="token punctuation">(</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>legend<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token builtin">list</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># 一张图中有多条曲线，参数需是列表</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+<h2 id="绘制水平、竖直线"><a href="#绘制水平、竖直线" class="headerlink" title="绘制水平、竖直线"></a>绘制水平、竖直线</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">plt<span class="token punctuation">.</span>hlines<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># 水平线</span>
+plt<span class="token punctuation">.</span>vlines<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># 竖直线</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="显示图片"><a href="#显示图片" class="headerlink" title="显示图片"></a>显示图片</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+<h2 id="保存图片"><a href="#保存图片" class="headerlink" title="保存图片"></a>保存图片</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">plt<span class="token punctuation">.</span>savefig<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
                 
             </div>
             <hr/>
@@ -750,7 +784,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://seekanotherland.xyz/medias/index.html">http://seekanotherland.xyz/medias/index.html</a>
+                    <a href="http://seekanotherland.xyz/posts/12059.html">http://seekanotherland.xyz/posts/12059.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1182,24 +1216,24 @@
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/medias/index.html">
+                <a href="/posts/12059.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://img.pterclub.com/images/2022/08/26/spider14.png" class="responsive-img" alt="musics">
+                        <img src="https://img.pterclub.com/images/2022/08/26/spider14.png" class="responsive-img" alt="matplotlib相关函数">
                         
-                        <span class="card-title">musics</span>
+                        <span class="card-title">matplotlib相关函数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            matplotlib相关函数使用记录
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-23
                             </span>
                         <span class="publish-author">
                             
@@ -1217,27 +1251,27 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/medias/index.html">
+                <a href="/posts/5192.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://img.pterclub.com/images/2022/08/26/spider14.png" class="responsive-img" alt="musics">
+                        <img src="https://img.pterclub.com/images/2022/08/26/spider17.png" class="responsive-img" alt="numpy相关函数">
                         
-                        <span class="card-title">musics</span>
+                        <span class="card-title">numpy相关函数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            numpy相关函数使用记录
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-23
                             </span>
                         <span class="publish-author">
                             
@@ -1247,7 +1281,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -1405,6 +1438,13 @@
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    });
+</script>
 
 
 

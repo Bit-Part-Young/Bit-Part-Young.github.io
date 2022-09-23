@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="musics, Seek Another Land">
-    <meta name="description" content="卸下所有的伪装">
+    <meta name="keywords" content="numpy相关函数, Seek Another Land">
+    <meta name="description" content="numpy相关函数使用记录">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@
 
     
 
-    <title>musics | Seek Another Land</title>
+    <title>numpy相关函数 | Seek Another Land</title>
     <link rel="icon" type="image/jpeg" href="https://img.pterclub.com/images/2022/08/25/favicon_rm.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -542,12 +542,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://img.pterclub.com/images/2022/08/26/spider14.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://img.pterclub.com/images/2022/08/26/spider17.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">musics</h1>
+                    <h1 class="description center-align post-title">numpy相关函数</h1>
                 </div>
             </div>
         </div>
@@ -675,21 +675,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-08-13
+                    2022-09-23
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-08-17
+                    2022-09-23
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    117
                 </div>
                 
 
@@ -724,7 +724,29 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+                <h1 id="numpy相关函数"><a href="#numpy相关函数" class="headerlink" title="numpy相关函数"></a>numpy相关函数</h1><h2 id="引入numpy包"><a href="#引入numpy包" class="headerlink" title="引入numpy包"></a>引入numpy包</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+<h2 id="导入数据文件"><a href="#导入数据文件" class="headerlink" title="导入数据文件"></a>导入数据文件</h2><p><code>loadtxt()</code>可以导入dat格式文件，数据文件中一般有注释行，可使用<code>skiprows</code>参数跳过注释行</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">data <span class="token operator">=</span> np<span class="token punctuation">.</span>loadtxt<span class="token punctuation">(</span>filename<span class="token punctuation">,</span> skiprows<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+<h2 id="取行、列"><a href="#取行、列" class="headerlink" title="取行、列"></a>取行、列</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">row_data <span class="token operator">=</span> data<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token punctuation">:</span><span class="token punctuation">]</span> <span class="token comment"># 取第二行数据</span>
+column_data <span class="token operator">=</span> data<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token comment"># 取第二列数据</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="一些算术函数"><a href="#一些算术函数" class="headerlink" title="一些算术函数"></a>一些算术函数</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">np<span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># 取最大值</span>
+np<span class="token punctuation">.</span>log<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># 取对数</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="获取下标"><a href="#获取下标" class="headerlink" title="获取下标"></a>获取下标</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">np<span class="token punctuation">.</span>argmin<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># 获取最小值的下标</span>
+np<span class="token punctuation">.</span>argmax<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># 获取最大值的下标</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
                 
             </div>
             <hr/>
@@ -750,7 +772,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://seekanotherland.xyz/medias/index.html">http://seekanotherland.xyz/medias/index.html</a>
+                    <a href="http://seekanotherland.xyz/posts/5192.html">http://seekanotherland.xyz/posts/5192.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1177,30 +1199,29 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/medias/index.html">
+                <a href="/posts/12059.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://img.pterclub.com/images/2022/08/26/spider14.png" class="responsive-img" alt="musics">
+                        <img src="https://img.pterclub.com/images/2022/08/26/spider14.png" class="responsive-img" alt="matplotlib相关函数">
                         
-                        <span class="card-title">musics</span>
+                        <span class="card-title">matplotlib相关函数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            matplotlib相关函数使用记录
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-13
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-09-23
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1209,7 +1230,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -1217,37 +1237,56 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/medias/index.html">
+                <a href="/posts/64567.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://img.pterclub.com/images/2022/08/26/spider14.png" class="responsive-img" alt="musics">
+                        <img src="https://img.pterclub.com/images/2022/08/26/spider16.png" class="responsive-img" alt="交大常用网址汇总">
                         
-                        <span class="card-title">musics</span>
+                        <span class="card-title">交大常用网址汇总</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            交大常用网址汇总
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-12
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Nobody
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%94%9F%E6%B4%BB/" class="post-category">
+                                    生活
+                                </a>
+                            
+                            <a href="/categories/%E7%94%9F%E6%B4%BB/%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    学习
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F%E7%94%9F%E6%B4%BB/">
+                        <span class="chip bg-color">研究生生活</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">研究生学习</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -1405,6 +1444,13 @@
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    });
+</script>
 
 
 
